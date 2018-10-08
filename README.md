@@ -1,5 +1,11 @@
 # wheel-of-fortune README
 
-  ## Hi Fidelity Wire-Frame
-  ![wire-frame](wire-frame.png)
+## Requirements
+
+## Specs
+
+## How to Play
+
+## Hi Fidelity Wire-Frame
+![wire-frame](wire-frame.png)
   
