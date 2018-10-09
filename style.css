@@ -1,0 +1,48 @@
+header {
+  display: flex;
+}
+
+header section {
+  display: flex;
+  padding: 30px;
+}
+
+li {
+  list-style: none;
+}
+
+.gameboard {
+  display: grid;
+  grid-template-columns: repeat(15, 40px);
+  grid-gap: 3px;
+  margin: 0 auto;
+  width: 800px;
+}
+
+.tile {
+  background-color: lightblue;
+  height: 60px;
+  width: 40px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.vowels-list {
+  display: flex;
+}
+
+.consonants-list {
+  display: flex;
+}
+
+.letter-section-container {
+  display: flex;
+}
+
+.instructions-content, 
+.instructions-current-player {
+  display: inline-block;
+}

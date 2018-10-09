@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Wheel of Fortune</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" /> 
+  <script src="jquery3.3.1.min.js"></script>
+</head>
+<body>
+  <div class="start-game-popup">
+    <input type="text">
+  </div>
+  <header>
+    <section class="round">Round 1</section>
+    <section class="player player1">
+      <h3 class="player-name player1-name">Player 1</h3>
+      <h3 class="player-label-total player1-label-total">Total: $<span class="player-value-total player1-value-total">0</span></h3>
+      <h3 class="player-label-score player1-label-score">Score: $<span class="player-value-score player1-value-score">0</span></h3>
+    </section>
+    <section class="player player2">
+      <h3 class="player-name player2-name">Player 2</h3>
+      <h3 class="player-label-total player2-label-total">Total: $<span class="player-value-total player2-value-total">0</span></h3>
+      <h3 class="player-label-score player2-label-score">Score: $<span class="player-value-score player2-value-score">0</span></h3>
+    </section>
+    <section class="player player3">
+      <h3 class="player-name player3-name">Player 3</h3>
+      <h3 class="player-label-total player3-label-total">Total: $<span class="player-value-total player3-value-total">0</span></h3>
+      <h3 class="player-label-score player3-label-score">Score: $<span class="player-value-score player3-value-score">0</span></h3>
+    </section>
+  </header>
+  <main>
+    <section class='gameboard'>  
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+      <div class='tile'></div> 
+    </section>
+    <section class='host'>
+    </section>
+    <section class="hint">
+    </section>
+  </main>
+  <footer>
+    <section class="guesses-container">
+      <ul class="past-guesses">        
+      </ul>
+      <div class="wheel">   
+        <ul class="wheel-items"> 
+        </ul> 
+      <div>
+    </section>
+  
+    <section class="letter-section-container">
+      <ul class="vowels-list">
+        <li class="vowel vowel-a">A</li>
+        <li class="vowel vowel-e">E</li>
+        <li class="vowel vowel-i">I</li>
+        <li class="vowel vowel-o">O</li>
+        <li class="vowel vowel-u">U</li>
+      </ul>
+      <ul class="consonants-list">
+        <li class="consonant consonant-b">B</li>
+        <li class="consonant consonant-c">C</li>
+        <li class="consonant consonant-d">D</li>
+        <li class="consonant consonant-f">F</li>
+        <li class="consonant consonant-g">G</li>
+        <li class="consonant consonant-h">H</li>
+        <li class="consonant consonant-j">J</li>
+        <li class="consonant consonant-k">K</li>
+        <li class="consonant consonant-l">L</li>
+        <li class="consonant consonant-m">M</li>
+        <li class="consonant consonant-n">N</li>
+        <li class="consonant consonant-p">P</li>
+        <li class="consonant consonant-q">Q</li>
+        <li class="consonant consonant-r">R</li>
+        <li class="consonant consonant-s">S</li>
+        <li class="consonant consonant-t">T</li>
+        <li class="consonant consonant-v">V</li>
+        <li class="consonant consonant-w">W</li>
+        <li class="consonant consonant-x">X</li>
+        <li class="consonant consonant-y">Y</li>
+        <li class="consonant consonant-z">Z</li>
+      </ul>
+      <h2 class="solve-button">SOLVE</h2>
+    </section>
+    <section class="instructions-container">
+      <h2 class="instructions-current-player">PLAYER 1</h2>
+      <h2 class="instructions-content">SPIN THE WHEEL!</h2>
+    </section>
+  </footer>
+  <script src="lib/game.js"></script>
+  <script src="lib/puzzle.js"></script>
+  <script src="lib/player.js"></script>
+  <script src="lib/wheel.js"></script>
+  <script src="lib/index.js"></script>
+</body>
+</html>
