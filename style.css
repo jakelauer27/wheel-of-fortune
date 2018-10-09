@@ -13,7 +13,7 @@ li {
 
 .gameboard {
   display: grid;
-  grid-template-columns: repeat(15, 40px);
+  grid-template-columns: repeat(13, 40px);
   grid-gap: 3px;
   margin: 0 auto;
   width: 800px;
