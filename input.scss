@@ -22,8 +22,9 @@ li {
 }
 
 .tile {
-  background-color: lightblue;
-  height: 60px;
+  background-image: url('images/tile-background.jpg');
+  background-size: 50px 40px;
+  height: 50px;
   width: 40px;
 }
 
