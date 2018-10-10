@@ -24,7 +24,7 @@ li {
 }
 
 .solve-button {
-  @extend %button-hover
+  @extend %button-hover;
 }
 
 .start-game-popup {
@@ -50,9 +50,11 @@ header {
 
   .round {
     align-items: center;
+    background-image: radial-gradient( rgb(114, 114, 114), rgb(31, 31, 31), black,);
     display: flex;
     border-right: 0px;
     height: 69px;
+    font-weight: 700;
     padding: 0;
     width: 150px;
   }

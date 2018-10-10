@@ -80,9 +80,11 @@ header section {
 }
 header .round {
   align-items: center;
+  background-image: radial-gradient(#727272, #1f1f1f, black);
   display: flex;
   border-right: 0px;
   height: 69px;
+  font-weight: 700;
   padding: 0;
   width: 150px;
 }
