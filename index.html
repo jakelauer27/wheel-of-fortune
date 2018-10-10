@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Wheel of Fortune</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" /> 
   <script src="jquery3.3.1.min.js"></script>
 </head>
@@ -22,86 +24,106 @@
     <section class="round">Round 1</section>
     <section class="player player1">
       <h3 class="player-name player1-name">Player 1</h3>
-      <h3 class="player-label-total player1-label-total">Total: $<span class="player-value-total player1-value-total">0</span></h3>
-      <h3 class="player-label-score player1-label-score">Score: $<span class="player-value-score player1-value-score">0</span></h3>
+      <h3 class="player-label-total player1-label-total">TOTAL: $<span class="player-value-total player1-value-total">0</span></h3>
+      <h3 class="player-label-score player1-label-score">SCORE: $<span class="player-value-score player1-value-score">0</span></h3>
     </section>
     <section class="player player2">
       <h3 class="player-name player2-name">Player 2</h3>
-      <h3 class="player-label-total player2-label-total">Total: $<span class="player-value-total player2-value-total">0</span></h3>
-      <h3 class="player-label-score player2-label-score">Score: $<span class="player-value-score player2-value-score">0</span></h3>
+      <h3 class="player-label-total player2-label-total">TOTAL: $<span class="player-value-total player2-value-total">0</span></h3>
+      <h3 class="player-label-score player2-label-score">SCORE: $<span class="player-value-score player2-value-score">0</span></h3>
     </section>
     <section class="player player3">
       <h3 class="player-name player3-name">Player 3</h3>
-      <h3 class="player-label-total player3-label-total">Total: $<span class="player-value-total player3-value-total">0</span></h3>
-      <h3 class="player-label-score player3-label-score">Score: $<span class="player-value-score player3-value-score">0</span></h3>
+      <h3 class="player-label-total player3-label-total">TOTAL: $<span class="player-value-total player3-value-total">0</span></h3>
+      <h3 class="player-label-score player3-label-score">SCORE: $<span class="player-value-score player3-value-score">0</span></h3>
     </section>
   </header>
   <main>
-    <section class='gameboard'>  
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-      <div class='tile'></div> 
-    </section>
-    <section class='host'>
-    </section>
-    <section class="hint">
-    </section>
+    <div class="game-container">
+      <section class="gameboard-title">
+        <h1 class="game-title">WHEEL OF FORTUNE!</h1>
+      </section>
+      <section class='gameboard'>  
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+        <div class='tile'></div> 
+      </section>
+      <section class="hint-container">
+          <h2 class="hint">HINT:</h2>
+        </section>
+    </div>
+    <div class="wheel">   
+        <ul class="wheel-items"> 
+          <img class="arrow-icon" src="images/play-button.svg">
+          <li class="wheel-item">$100</li>
+          <li class="wheel-item bankrupt">Bankrupt</li>
+          <li class="wheel-item">$100</li>
+          <li class="wheel-item">$100</li>
+          <li class="wheel-item">$100</li>
+          <li class="wheel-item">$100</li>
+          <li class="wheel-item">$100</li>
+          <li class="wheel-item">$100</li>
+          <li class="wheel-item">$100</li>
+          <li class="wheel-item">$100</li>
+          <li class="wheel-item">$100</li>
+          <li class="wheel-item">$100</li>
+          <li class="wheel-item">$100</li>
+          <li class="wheel-item">$100</li>
+        </ul> 
+      <div>
   </main>
   <footer>
     <section class="guesses-container">
-      <ul class="past-guesses">        
+      <ul class="past-guesses">   
+        <li class="past-guess">E</li>   
       </ul>
-      <div class="wheel">   
-        <ul class="wheel-items"> 
-        </ul> 
-      <div>
+      <button class="spin-button">SPIN</button>
     </section>
-  
     <section class="letter-section-container">
-      <ul class="vowels-list">
+      <ul class="letter-list vowels-list">
         <li class="vowel vowel-a">A</li>
         <li class="vowel vowel-e">E</li>
         <li class="vowel vowel-i">I</li>
         <li class="vowel vowel-o">O</li>
         <li class="vowel vowel-u">U</li>
       </ul>
-      <ul class="consonants-list">
+      <ul class="letter-list consonants-list">
         <li class="consonant consonant-b">B</li>
         <li class="consonant consonant-c">C</li>
         <li class="consonant consonant-d">D</li>
@@ -127,7 +149,7 @@
       <h2 class="solve-button">SOLVE</h2>
     </section>
     <section class="instructions-container">
-      <h2 class="instructions-current-player">PLAYER 1</h2>
+      <h2 class="instructions-current-player">PLAYER 1:</h2>
       <h2 class="instructions-content">SPIN THE WHEEL!</h2>
     </section>
   </footer>

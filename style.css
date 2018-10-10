@@ -43,53 +43,191 @@ table {
   border-spacing: 0;
 }
 
-header {
-  display: flex;
+.solve-button:hover, li:hover {
+  color: white;
+  cursor: pointer;
 }
-header section {
-  display: flex;
-  padding: 35px;
+.solve-button:disabled, li:disabled {
+  color: grey;
+}
+.solve-button:active, li:active {
+  color: blue;
 }
 
 li {
   list-style: none;
 }
 
-.gameboard {
+header {
+  background-color: grey;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header section {
+  border-left: 2px solid black;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
+}
+header .player {
   display: grid;
-  grid-template-columns: repeat(13, 40px);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "playerName playerName" "total score";
+}
+header .round {
+  flex-grow: 0.25;
+}
+
+.player-label-total {
+  grid-area: total;
+  justify-self: center;
+  font-weight: 700;
+}
+
+.player-label-score {
+  grid-area: score;
+  justify-self: center;
+  font-weight: 700;
+}
+
+.player-name {
+  grid-area: playerName;
+  justify-self: center;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.player-value-total,
+.player-value-score {
+  padding-right: 7px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto 150px;
+  align-items: center;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-title {
+  font-family: "Alfa Slab One", cursive;
+  font-size: 2.4em;
+  margin: 5px;
+}
+
+.hint {
+  font-size: 1.2em;
+  font-family: "Open Sans", sans-serif;
+  margin: 7px;
+}
+
+.wheel {
+  border-left: 3px solid black;
+  height: 65vh;
+  width: 150px;
+  background-color: lightblue;
+  overflow: hidden;
+  position: relative;
+}
+.wheel li {
+  font-family: "Alfa Slab One", cursive;
+  font-size: 2em;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 3px solid black;
+}
+.wheel .bankrupt {
+  font-size: 1.5em;
+  padding: 13px;
+}
+
+.arrow-icon {
+  height: 20px;
+  position: absolute;
+  width: 20px;
+  left: -5px;
+  top: 31vh;
+}
+
+.gameboard {
+  background-color: #a4e2cf;
+  border: 8px solid #75acf8;
+  display: grid;
+  grid-template-columns: repeat(13, 60px);
   grid-gap: 3px;
+  justify-content: center;
   margin: 0 auto;
-  width: 800px;
+  padding: 4px;
+  width: 820px;
 }
 
 .tile {
   background-image: url("images/tile-background.jpg");
-  background-size: 50px 40px;
+  background-size: 54px 65px;
+  border: 5px solid black;
+  height: 65px;
+  width: 50px;
+}
+
+.guesses-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.spin-button {
+  width: 150px;
   height: 50px;
-  width: 40px;
 }
 
 footer {
   display: flex;
   flex-direction: column;
-}
-
-.vowels-list {
-  display: flex;
-}
-
-.consonants-list {
-  display: flex;
+  font-size: 1.2em;
+  font-family: "Open Sans", sans-serif;
 }
 
 .letter-section-container {
+  background-color: grey;
   display: flex;
+  justify-content: space-around;
+}
+.letter-section-container .letter-list {
+  border-right: 2px solid black;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+.letter-section-container .vowels-list {
+  flex-grow: 0.25;
+}
+.letter-section-container .consonants-list {
+  flex-grow: 1;
+}
+.letter-section-container .solve-button {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  justify-content: center;
+  padding: auto;
 }
 
-.instructions-content,
-.instructions-current-player {
+.instructions-container {
+  background-color: lightgray;
+}
+.instructions-container .instructions-content,
+.instructions-container .instructions-current-player {
   display: inline-block;
+  padding: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
