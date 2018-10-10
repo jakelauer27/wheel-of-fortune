@@ -21,7 +21,6 @@
     <button class ="btn-start-game">Start Game</button>
   </div>
   <header>
-    <section class="round">Round 1</section>
     <section class="player player1">
       <h3 class="player-name player1-name">Player 1</h3>
       <h3 class="player-label-total player1-label-total">TOTAL: $<span class="player-value-total player1-value-total">0</span></h3>
@@ -37,6 +36,7 @@
       <h3 class="player-label-total player3-label-total">TOTAL: $<span class="player-value-total player3-value-total">0</span></h3>
       <h3 class="player-label-score player3-label-score">SCORE: $<span class="player-value-score player3-value-score">0</span></h3>
     </section>
+    <section class="round">Round 1</section>
   </header>
   <main>
     <div class="game-container">
@@ -87,6 +87,9 @@
       <section class="hint-container">
           <h2 class="hint">HINT:</h2>
         </section>
+      <ul class="past-guesses">   
+         <li class="past-guess">E</li>   
+      </ul>
     </div>
     <div class="wheel">   
         <ul class="wheel-items"> 
@@ -106,15 +109,10 @@
           <li class="wheel-item">$100</li>
           <li class="wheel-item">$100</li>
         </ul> 
+        <button class="spin-button">SPIN</button>
       <div>
   </main>
   <footer>
-    <section class="guesses-container">
-      <ul class="past-guesses">   
-        <li class="past-guess">E</li>   
-      </ul>
-      <button class="spin-button">SPIN</button>
-    </section>
     <section class="letter-section-container">
       <ul class="letter-list vowels-list">
         <li class="vowel vowel-a">A</li>
@@ -153,10 +151,10 @@
       <h2 class="instructions-content">SPIN THE WHEEL!</h2>
     </section>
   </footer>
-  <script src="lib/game.js"></script>
   <script src="lib/puzzle.js"></script>
-  <script src="lib/player.js"></script>
   <script src="lib/wheel.js"></script>
+  <script src="lib/player.js"></script>
+  <script src="lib/game.js"></script>
   <script src="lib/index.js"></script>
 </body>
 </html>

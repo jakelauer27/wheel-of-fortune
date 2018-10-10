@@ -1,9 +1,9 @@
 @import 'reset';
 
 $purpleHint: #6B2375;
-$redPLayer: #8F0908;
-$yellowPlayer: #D6A407;
-$bluePlayer: #2980DD;
+$purplePlayer: rgb(67, 32, 118);
+$greenPlayer: rgb(62, 142, 111);
+$bluePlayer: rgb(22, 132, 165);
 
 %button-hover {
   &:hover {
@@ -24,26 +24,43 @@ li {
 }
 
 .solve-button {
-  @extend %button-hover
+  @extend %button-hover;
+}
+
+.start-game-popup {
+  display: none;
 }
 
 header {
   background-color: grey;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 150px;
   align-items: center;
 
   section {
-    border-left: 2px solid black;
+    border: 2px solid black;
+    color: rgb(247, 247, 247);
     display: flex;
     flex-grow: 1;
     justify-content: space-around;
-    padding: 10px;
+    padding: 9px 9px 2px;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2em;
   }
 
+  .round {
+    align-items: center;
+    background-image: radial-gradient( rgb(114, 114, 114), rgb(31, 31, 31), black,);
+    display: flex;
+    border-right: 0px;
+    height: 69px;
+    font-weight: 700;
+    padding: 0;
+    width: 150px;
+  }
+
   .player {
+    border-left: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -52,36 +69,33 @@ header {
         "total score";
   }
 
-  .round {
-    flex-grow: .25;
-  }
 }
 
 .player1 {
-
+  background-image: linear-gradient(to right, $bluePlayer, rgb(105, 224, 228));
 }
 
 .player2 {
-
+  background-image: linear-gradient(to right, $purplePlayer, rgb(167, 82, 236));
 }
 
+.player3 {
+  background-image: linear-gradient(to right, $greenPlayer, rgb(104, 226, 184));
+}
 
 
 .player-label-total {
   grid-area: total;
-  justify-self: center;
   font-weight: 700;
 }
 
 .player-label-score {
   grid-area: score;
-  justify-self: center;
   font-weight: 700;
 }
 
 .player-name {
   grid-area: playerName;
-  justify-self: center;
   padding-right: 10px;
   padding-bottom: 10px;
 }
@@ -92,8 +106,10 @@ header {
 }
 
 main {
+  background-image: url('images/background.png');
+  background-size: cover;
   display: grid;
-  grid-template-columns: auto 150px;
+  grid-template-columns: auto 151px;
   align-items: center
 }
 
@@ -107,6 +123,10 @@ main {
   font-family: 'Alfa Slab One', cursive;
   font-size: 2.4em;
   margin: 5px;
+  background: linear-gradient(to top right, rgb(167, 151, 108), rgb(255, 246, 120), rgb(187, 164, 105));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hint {
@@ -116,9 +136,9 @@ main {
 }
 
 .wheel {
-  border-left: 3px solid black;
+  border-left: 4px solid $bluePlayer;
   height: 65vh;
-  width: 150px;
+  width: 151px;
   background-color: lightblue;
   overflow: hidden;
   position: relative;
@@ -147,7 +167,9 @@ main {
 
 .gameboard {
   background-color: rgb(164, 226, 207);
-  border: 8px solid rgb(117, 172, 248);
+  border-image: linear-gradient(to right, #81f0ff, #0063c0) 30;
+  border-width: 7px;
+  border-style: solid;
   display: grid;
   grid-template-columns: repeat(13, 60px);
   grid-gap: 3px;
@@ -173,6 +195,8 @@ main {
 .spin-button {
   width: 150px;
   height: 50px;
+  position: absolute;
+  bottom: 0;
 }
 
 footer {
