@@ -1,0 +1,227 @@
+@import 'reset';
+@import 'header';
+@import 'footer';
+
+$purpleHint: #6B2375;
+$purplePlayer: rgb(67, 32, 118);
+$greenPlayer: rgb(62, 142, 111);
+$bluePlayer: rgb(22, 132, 165);
+$purpleLight: rgb(167, 82, 236);
+$greenLight: rgb(104, 226, 184);
+$blueLight: rgb(105, 224, 228);
+
+.start-game-popup {
+  background-image: radial-gradient( rgb(114, 114, 114), rgb(31, 31, 31), black,);
+  border: 3px solid $purpleLight;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: calc(15vh);
+  right: calc(50vw - 225px);
+  width: 600px;
+
+
+  %input {
+    border-radius: 20px;
+    height: 35px;
+    margin: 10px auto;
+    text-align:center;
+    width: 80%;
+    font-size: 1.4em;
+  }
+
+  .input-player1-name {
+    @extend %input;
+    border: 3px solid $blueLight;
+
+    &:hover {
+      border-color: $bluePlayer;
+    }
+  }
+
+  .input-player2-name {
+    @extend %input;
+    border: 3px solid $purpleLight;
+
+    &:hover {
+      border-color: $purplePlayer;
+    }
+  }
+
+  .input-player3-name {
+    @extend %input;
+    border: 3px solid $greenLight;
+
+    &:hover {
+      border-color: $greenPlayer;
+    }
+  }
+
+  .new-game {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2.4em;
+    margin: 20px auto;
+    background: linear-gradient(to top right, rgb(167, 151, 108), rgb(255, 246, 120), rgb(187, 164, 105));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  button {
+    background-color: rgb(175, 170, 92);
+    border: 3px solid white;
+    border-radius: 20px;
+    color: white;
+    height: 40px;
+    font-size: 1.4em;
+    margin: 20px auto 20px;
+    width: 70%;
+
+    &:hover {
+      background-color: white;
+      border-color: rgb(175, 170, 92);
+      color: rgb(175, 170, 92);
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  background-image: url('../images/background.png');
+  background-size: cover;
+  display: grid;
+  grid-template-columns: auto 151px;
+  align-items: center
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-title {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 2.4em;
+  margin: 5px;
+  background: linear-gradient(to top right, rgb(167, 151, 108), rgb(255, 246, 120), rgb(187, 164, 105));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hint {
+  font-size: 1.2em;
+  font-family: 'Open Sans', sans-serif;
+  margin: 7px;
+}
+
+.wheel {
+  border-left: 4px solid $bluePlayer;
+  height: 65vh;
+  width: 151px;
+  background-color: lightblue;
+  overflow: hidden;
+  position: relative;
+
+  li {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 3px solid black;
+  }
+
+  .bankrupt {
+    font-size: 1.2em;
+    padding: 16px 8px 16px;
+  }
+
+  .lose-turn {
+    font-size: 1em;
+    padding: 17px 6px 17px;
+  }
+}
+
+.arrow-icon {
+  height: 20px;
+  position: absolute;
+  width: 20px;
+  left: -5px;
+  top: 31vh;
+}
+
+.gameboard {
+  background-color: rgb(164, 226, 207);
+  border-image: linear-gradient(to right, #81f0ff, #0063c0) 30;
+  border-width: 7px;
+  border-style: solid;
+  display: grid;
+  grid-template-columns: repeat(13, 60px);
+  grid-gap: 3px;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 4px;
+  width: 820px;
+}
+
+.tile {
+  background-image: url('../images/tile-background.jpg');
+  background-size: 54px 65px;
+  border: 5px solid black;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 3.4em;
+  text-align: center;
+  height: 62px;
+  width: 50px;
+}
+
+.display-tile {
+  background-image: none;
+  background-color: white;
+}
+
+.hide-letter {
+  color: white;
+}
+
+.guesses-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.spin-button {
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+}
+
+%button-hover {
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+  &:disabled {
+    color: grey;
+  }
+  &:active {
+    color: red;
+  }
+}
+
+.consonant,
+.vowel {
+  @extend %button-hover;
+  list-style: none;
+}
+
+.solve-button {
+  @extend %button-hover;
+}
+
