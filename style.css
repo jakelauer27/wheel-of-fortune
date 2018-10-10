@@ -218,8 +218,17 @@ main {
   background-image: url("images/tile-background.jpg");
   background-size: 54px 65px;
   border: 5px solid black;
-  height: 65px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 3.4em;
+  text-align: center;
+  height: 58px;
   width: 50px;
+}
+
+.display-tile {
+  background-image: none;
+  background-color: white;
 }
 
 .guesses-container {
