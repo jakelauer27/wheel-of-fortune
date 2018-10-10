@@ -59,6 +59,15 @@ li {
 }
 
 .start-game-popup {
+  background-color: grey;
+  position: absolute;
+  top: calc(50vh - 150px);
+  right: calc(50vw - 300px);
+  width: 600px;
+  height: 300px;
+}
+
+.hide {
   display: none;
 }
 
