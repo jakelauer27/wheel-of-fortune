@@ -58,46 +58,66 @@ li {
   list-style: none;
 }
 
+.start-game-popup {
+  display: none;
+}
+
 header {
   background-color: grey;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 150px;
   align-items: center;
 }
 header section {
-  border-left: 2px solid black;
+  border: 2px solid black;
+  color: #f7f7f7;
   display: flex;
   flex-grow: 1;
   justify-content: space-around;
-  padding: 10px;
+  padding: 9px 9px 2px;
   font-family: "Open Sans", sans-serif;
   font-size: 1.2em;
 }
+header .round {
+  align-items: center;
+  display: flex;
+  border-right: 0px;
+  height: 69px;
+  padding: 0;
+  width: 150px;
+}
 header .player {
+  border-left: 0px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "playerName playerName" "total score";
 }
-header .round {
-  flex-grow: 0.25;
+
+.player1 {
+  background-image: linear-gradient(to right, #1684a5, #69e0e4);
+}
+
+.player2 {
+  background-image: linear-gradient(to right, #432076, #a752ec);
+}
+
+.player3 {
+  background-image: linear-gradient(to right, #3e8e6f, #68e2b8);
 }
 
 .player-label-total {
   grid-area: total;
-  justify-self: center;
   font-weight: 700;
 }
 
 .player-label-score {
   grid-area: score;
-  justify-self: center;
   font-weight: 700;
 }
 
 .player-name {
   grid-area: playerName;
-  justify-self: center;
   padding-right: 10px;
   padding-bottom: 10px;
 }
@@ -108,8 +128,10 @@ header .round {
 }
 
 main {
+  background-image: url("images/background.png");
+  background-size: cover;
   display: grid;
-  grid-template-columns: auto 150px;
+  grid-template-columns: auto 151px;
   align-items: center;
 }
 
@@ -123,6 +145,10 @@ main {
   font-family: "Alfa Slab One", cursive;
   font-size: 2.4em;
   margin: 5px;
+  background: linear-gradient(to top right, #a7976c, #fff678, #bba469);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hint {
@@ -132,9 +158,9 @@ main {
 }
 
 .wheel {
-  border-left: 3px solid black;
+  border-left: 4px solid #1684a5;
   height: 65vh;
-  width: 150px;
+  width: 151px;
   background-color: lightblue;
   overflow: hidden;
   position: relative;
@@ -161,7 +187,9 @@ main {
 
 .gameboard {
   background-color: #a4e2cf;
-  border: 8px solid #75acf8;
+  border-image: linear-gradient(to right, #81f0ff, #0063c0) 30;
+  border-width: 7px;
+  border-style: solid;
   display: grid;
   grid-template-columns: repeat(13, 60px);
   grid-gap: 3px;
@@ -187,6 +215,8 @@ main {
 .spin-button {
   width: 150px;
   height: 50px;
+  position: absolute;
+  bottom: 0;
 }
 
 footer {
