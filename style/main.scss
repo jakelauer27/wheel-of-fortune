@@ -69,7 +69,7 @@ $blueLight: rgb(105, 224, 228);
   }
 
   button {
-    background-color: rgb(175, 170, 92);
+    background-color: rgb(175, 92, 92);
     border: 3px solid white;
     border-radius: 20px;
     color: white;
@@ -91,11 +91,11 @@ $blueLight: rgb(105, 224, 228);
 }
 
 main {
+  align-items: center;
   background-image: url('../images/background.png');
   background-size: cover;
   display: grid;
   grid-template-columns: auto 151px;
-  align-items: center
 }
 
 .game-container {
@@ -115,9 +115,14 @@ main {
 }
 
 .hint {
-  font-size: 1.2em;
+  background-image: linear-gradient(to right, rgba(246, 239, 255, 0), $purplePlayer, $purpleHint, rgba(246, 239, 255, 0));
+  color: white;
+  font-size: 1.4em;
   font-family: 'Open Sans', sans-serif;
   margin: 7px;
+  padding: 5px;
+  text-align: center;
+  width: 850px;
 }
 
 .wheel {
@@ -175,7 +180,7 @@ main {
   border: 5px solid black;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
-  font-size: 3.4em;
+  font-size: 3.2em;
   text-align: center;
   height: 62px;
   width: 50px;
@@ -193,6 +198,8 @@ main {
 .guesses-container {
   display: flex;
   justify-content: space-between;
+  bottom: 10px;
+  right: 20px;
 }
 
 .spin-button {
@@ -215,6 +222,21 @@ main {
   }
 }
 
+.past-guesses {
+  align-self: flex-start;
+  justify-self: flex-start;
+  margin: 17px;
+  position: relative;
+  bottom: -65px;
+
+  .past-guess {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.9em;
+    color: white;
+
+  }
+}
+
 .consonant,
 .vowel {
   @extend %button-hover;
@@ -223,5 +245,7 @@ main {
 
 .solve-button {
   @extend %button-hover;
+  color: rgb(249, 79, 255)
 }
+
 
