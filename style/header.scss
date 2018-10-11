@@ -46,9 +46,10 @@ header {
   }
 
   .highlight {
-    color: yellow;
+    background-image: linear-gradient(to top right, rgb(167, 151, 108), rgb(255, 246, 120), rgb(187, 164, 105));
+    color: black;
+    border-bottom-color: rgb(255, 255, 255);
   }
-
 }
 
 .player1 {
