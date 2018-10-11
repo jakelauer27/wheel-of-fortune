@@ -335,12 +335,8 @@ main {
   border-bottom: 3px solid black;
 }
 .wheel .bankrupt {
-  font-size: 1.2em;
-  padding: 16px 8px 16px;
-}
-.wheel .lose-turn {
   font-size: 1em;
-  padding: 17px 6px 17px;
+  padding: 16px 8px 16px;
 }
 
 .arrow-icon {
