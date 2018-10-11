@@ -14,6 +14,7 @@ header {
 
   section {
     border: 2px solid black;
+    border-bottom-width: 4px;
     color: rgb(247, 247, 247);
     display: flex;
     flex-grow: 1;
@@ -42,6 +43,10 @@ header {
     grid-template-areas: 
         "playerName playerName"
         "total score";
+  }
+
+  .highlight {
+    color: yellow;
   }
 
 }
