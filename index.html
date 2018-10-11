@@ -11,12 +11,12 @@
   <script src="jquery3.3.1.min.js"></script>
 </head>
 <body>
-  <div class="start-game-popup">
+  <div class="start-game-popup popup">
     <h1 class="new-game">New Game</h1>
     <input class="input-player-name input-player1-name" type="text" value="Player1">
     <input class="input-player-name input-player2-name" type="text" value="Player2">
     <input class="input-player-name input-player3-name" type="text" value='Player3'>
-    <button class ="btn-start-game">Start Game</button>
+    <button class ="btn-start-game go-button">Start Game</button>
   </div>
   <header>
     <section class="player player1">
@@ -143,6 +143,10 @@
         <button class="consonant consonant-z">Z</button>
       </ul>
       <h2 class="solve-button">SOLVE</h2>
+      <div class="solve-popup popup hide">
+        <input class="solve-input" type="text">
+        <button class='submit-guess-button go-button'>Submit</button>
+      </div>
     </section>
     <section class="instructions-container">
       <h2 class="instructions-current-player"></h2>

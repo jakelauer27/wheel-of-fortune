@@ -187,11 +187,20 @@ footer {
   padding: 20px;
 }
 
+.solve-input, .popup .input-player3-name, .popup .input-player2-name, .popup .input-player1-name {
+  border-radius: 20px;
+  height: 35px;
+  margin: 10px auto;
+  text-align: center;
+  width: 80%;
+  font-size: 1.4em;
+}
+
 body {
   background: black;
 }
 
-.start-game-popup {
+.popup {
   background-image: radial-gradient(#727272, #1f1f1f, black);
   border: 3px solid #a752ec;
   border-radius: 20px;
@@ -202,33 +211,25 @@ body {
   right: calc(50vw - 225px);
   width: 600px;
 }
-.start-game-popup .input-player3-name, .start-game-popup .input-player2-name, .start-game-popup .input-player1-name {
-  border-radius: 20px;
-  height: 35px;
-  margin: 10px auto;
-  text-align: center;
-  width: 80%;
-  font-size: 1.4em;
-}
-.start-game-popup .input-player1-name {
+.popup .input-player1-name {
   border: 3px solid #69e0e4;
 }
-.start-game-popup .input-player1-name:hover {
+.popup .input-player1-name:hover {
   border-color: #1684a5;
 }
-.start-game-popup .input-player2-name {
+.popup .input-player2-name {
   border: 3px solid #a752ec;
 }
-.start-game-popup .input-player2-name:hover {
+.popup .input-player2-name:hover {
   border-color: #432076;
 }
-.start-game-popup .input-player3-name {
+.popup .input-player3-name {
   border: 3px solid #68e2b8;
 }
-.start-game-popup .input-player3-name:hover {
+.popup .input-player3-name:hover {
   border-color: #3e8e6f;
 }
-.start-game-popup .new-game {
+.popup .new-game {
   font-family: "Alfa Slab One", cursive;
   font-size: 2.4em;
   margin: 20px auto;
@@ -237,7 +238,8 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.start-game-popup button {
+
+.go-button {
   background-image: linear-gradient(to top right, #a7976c, #fff678, #bba469);
   border: 3px solid white;
   border-radius: 20px;
@@ -247,7 +249,7 @@ body {
   margin: 20px auto 20px;
   width: 70%;
 }
-.start-game-popup button:hover {
+.go-button:hover {
   background-image: none;
   background-color: white;
   border-color: #dbd35f;
@@ -255,6 +257,17 @@ body {
 
 .hide {
   display: none;
+}
+
+.solve-popup {
+  top: calc(55vh);
+}
+
+.solve-input {
+  border: 3px solid #a752ec;
+}
+.solve-input:hover {
+  border-color: #432076;
 }
 
 main {

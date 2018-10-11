@@ -10,11 +10,20 @@ $purpleLight: rgb(167, 82, 236);
 $greenLight: rgb(104, 226, 184);
 $blueLight: rgb(105, 224, 228);
 
+%input {
+  border-radius: 20px;
+  height: 35px;
+  margin: 10px auto;
+  text-align:center;
+  width: 80%;
+  font-size: 1.4em;
+}
+
 body {
   background: black;
 }
 
-.start-game-popup {
+.popup {
   background-image: radial-gradient( rgb(114, 114, 114), rgb(31, 31, 31), black,);
   border: 3px solid $purpleLight;
   border-radius: 20px;
@@ -25,15 +34,6 @@ body {
   right: calc(50vw - 225px);
   width: 600px;
 
-
-  %input {
-    border-radius: 20px;
-    height: 35px;
-    margin: 10px auto;
-    text-align:center;
-    width: 80%;
-    font-size: 1.4em;
-  }
 
   .input-player1-name {
     @extend %input;
@@ -71,29 +71,44 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
 
-  button {
-    background-image: linear-gradient(to top right, rgb(167, 151, 108), rgb(255, 246, 120), rgb(187, 164, 105));
-    border: 3px solid white;
-    border-radius: 20px;
-    color: black;
-    height: 40px;
-    font-size: 1.4em;
-    margin: 20px auto 20px;
-    width: 70%;
+.go-button {
+  background-image: linear-gradient(to top right, rgb(167, 151, 108), rgb(255, 246, 120), rgb(187, 164, 105));
+  border: 3px solid white;
+  border-radius: 20px;
+  color: black;
+  height: 40px;
+  font-size: 1.4em;
+  margin: 20px auto 20px;
+  width: 70%;
 
-    &:hover {
-      background-image: none;
-      background-color: white;
-      border-color: rgb(219, 211, 95);
-      
-    }
+  &:hover {
+    background-image: none;
+    background-color: white;
+    border-color: rgb(219, 211, 95);
+    
   }
 }
 
 .hide {
   display: none;
 }
+
+.solve-popup {
+  top: calc(55vh)
+}
+
+.solve-input {
+  @extend %input;
+  border: 3px solid $purpleLight;
+
+  &:hover {
+    border-color: $purplePlayer;
+  }
+}
+
+
 
 main {
   align-items: center;
