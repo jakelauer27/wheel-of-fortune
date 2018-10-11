@@ -121,8 +121,6 @@ body {
   }
 }
 
-
-
 main {
   align-items: center;
   background-image: url('../images/background.png');
@@ -243,8 +241,8 @@ main {
   font-style: italic;
   font-size: 1.4em;
   position: absolute;
-  right: 3px;
-  width: 152px;
+  right: 0px;
+  width: 155px;
 
   &:hover {
     background-image: linear-gradient(to top right, rgb(211, 191, 138), rgb(255, 250, 182), rgb(233, 204, 132));

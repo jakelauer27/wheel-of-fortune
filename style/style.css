@@ -78,7 +78,9 @@ header .player {
   grid-template-areas: "playerName playerName" "total score";
 }
 header .highlight {
-  color: yellow;
+  background-image: linear-gradient(to top right, #a7976c, #fff678, #bba469);
+  color: black;
+  border-bottom-color: white;
 }
 
 .player1 {
@@ -399,8 +401,8 @@ main {
   font-style: italic;
   font-size: 1.4em;
   position: absolute;
-  right: 3px;
-  width: 152px;
+  right: 0px;
+  width: 155px;
 }
 .spin-button:hover {
   background-image: linear-gradient(to top right, #d3bf8a, #fffab6, #e9cc84);
