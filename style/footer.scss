@@ -37,13 +37,14 @@ footer {
   }
 }
 
+
 %button-hover {
   &:hover {
     color: white;
     cursor: pointer;
   }
   &:disabled {
-    color: grey;
+    color: rgb(77, 77, 77);
   }
   &:active {
     color: $blueLight;
@@ -55,8 +56,7 @@ footer {
   @extend %button-hover;
   background: none;
   border: 0;
-  font-size: 1.6em;
-  
+  font-size: 1.2em;
 }
 
 .solve-button {

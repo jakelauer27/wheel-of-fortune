@@ -51,6 +51,7 @@ header {
 }
 header section {
   border: 2px solid black;
+  border-bottom-width: 4px;
   color: #f7f7f7;
   display: flex;
   flex-grow: 1;
@@ -75,6 +76,9 @@ header .player {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "playerName playerName" "total score";
+}
+header .highlight {
+  color: yellow;
 }
 
 .player1 {
@@ -152,11 +156,18 @@ footer {
 }
 .solve-button:disabled, .consonant:disabled,
 .vowel:disabled {
-  color: grey;
+  color: #4d4d4d;
 }
 .solve-button:active, .consonant:active,
 .vowel:active {
   color: #69e0e4;
+}
+
+.consonant,
+.vowel {
+  background: none;
+  border: 0;
+  font-size: 1.2em;
 }
 
 .solve-button {
@@ -369,6 +380,9 @@ main {
 .spin-button:hover {
   background-image: linear-gradient(to top right, #d3bf8a, #fffab6, #e9cc84);
 }
+.spin-button:disabled {
+  background-image: linear-gradient(to top right, #796d4e, #b8b487, #9e8b5b);
+}
 
 .past-guesses {
   align-self: flex-start;
@@ -384,27 +398,6 @@ main {
   font-size: 1.9em;
   color: white;
   margin: 10px;
-}
-
-.consonant:hover,
-.vowel:hover, .solve-button:hover {
-  color: white;
-  cursor: pointer;
-}
-.consonant:disabled,
-.vowel:disabled, .solve-button:disabled {
-  color: #4d4d4d;
-}
-.consonant:active,
-.vowel:active, .solve-button:active {
-  color: #69e0e4;
-}
-
-.consonant,
-.vowel {
-  background: none;
-  border: 0;
-  font-size: 1.2em;
 }
 
 /*# sourceMappingURL=style.css.map */
