@@ -221,6 +221,10 @@ main {
   &:hover {
     background-image: linear-gradient(to top right, rgb(211, 191, 138), rgb(255, 250, 182), rgb(233, 204, 132));
   }
+
+  &:disabled {
+    background-image: linear-gradient(to top right, rgb(121, 109, 78), rgb(184, 180, 135), rgb(158, 139, 91));
+  }
 }
 
 .past-guesses {
@@ -241,25 +245,4 @@ main {
   }
 }
 
-
-%button-hover {
-  &:hover {
-    color: white;
-    cursor: pointer;
-  }
-  &:disabled {
-    color: rgb(77, 77, 77);
-  }
-  &:active {
-    color: $blueLight;
-  }
-}
-
-.consonant,
-.vowel {
-  @extend %button-hover;
-  background: none;
-  border: 0;
-  font-size: 1.2em;
-}
 
