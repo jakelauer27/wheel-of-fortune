@@ -200,6 +200,17 @@ body {
   background: black;
 }
 
+.dark-overlay {
+  background-color: black;
+  opacity: 0.7;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+
 .popup {
   background-image: radial-gradient(#727272, #1f1f1f, black);
   border: 3px solid #a752ec;
@@ -210,6 +221,7 @@ body {
   top: calc(15vh);
   right: calc(50vw - 225px);
   width: 600px;
+  z-index: 3;
 }
 .popup .input-player1-name {
   border: 3px solid #69e0e4;
@@ -335,7 +347,7 @@ main {
   width: 25px;
   left: -7px;
   top: 31vh;
-  z-index: 3;
+  z-index: 1;
 }
 
 .gameboard {
