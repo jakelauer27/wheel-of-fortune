@@ -113,17 +113,20 @@ header .player {
 footer {
   display: flex;
   flex-direction: column;
-  font-size: 1.2em;
+  font-size: 1.4em;
+  font-weight: 600;
   font-family: "Open Sans", sans-serif;
 }
 
 .letter-section-container {
-  background-color: grey;
+  background-image: linear-gradient(to top right, #5a5a5a, #b8b8b8);
   display: flex;
   justify-content: space-around;
 }
 .letter-section-container .letter-list {
-  border-right: 2px solid black;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
   display: flex;
   justify-content: space-around;
   padding: 20px;
@@ -142,13 +145,39 @@ footer {
   padding: auto;
 }
 
+.solve-button:hover, .consonant:hover,
+.vowel:hover {
+  color: white;
+  cursor: pointer;
+}
+.solve-button:disabled, .consonant:disabled,
+.vowel:disabled {
+  color: grey;
+}
+.solve-button:active, .consonant:active,
+.vowel:active {
+  color: #69e0e4;
+}
+
+.solve-button {
+  font-style: italic;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
 .instructions-container {
-  background-color: lightgray;
+  background-image: linear-gradient(to top right, black, #1d1d1d);
+  height: 70px;
+  color: white;
 }
 .instructions-container .instructions-content,
 .instructions-container .instructions-current-player {
   display: inline-block;
   padding: 20px;
+}
+
+body {
+  background: black;
 }
 
 .start-game-popup {
@@ -198,19 +227,19 @@ footer {
   -webkit-text-fill-color: transparent;
 }
 .start-game-popup button {
-  background-color: #af5c5c;
+  background-image: linear-gradient(to top right, #a7976c, #fff678, #bba469);
   border: 3px solid white;
   border-radius: 20px;
-  color: white;
+  color: black;
   height: 40px;
   font-size: 1.4em;
   margin: 20px auto 20px;
   width: 70%;
 }
 .start-game-popup button:hover {
+  background-image: none;
   background-color: white;
-  border-color: #afaa5c;
-  color: #afaa5c;
+  border-color: #dbd35f;
 }
 
 .hide {
@@ -222,7 +251,7 @@ main {
   background-image: url("../images/background.png");
   background-size: cover;
   display: grid;
-  grid-template-columns: auto 151px;
+  grid-template-columns: auto 153px;
 }
 
 .game-container {
@@ -233,7 +262,7 @@ main {
 
 .game-title {
   font-family: "Alfa Slab One", cursive;
-  font-size: 2.4em;
+  font-size: 2.6em;
   margin: 5px;
   background: linear-gradient(to top right, #a7976c, #fff678, #bba469);
   -webkit-background-clip: text;
@@ -253,9 +282,9 @@ main {
 }
 
 .wheel {
-  border-left: 4px solid #1684a5;
+  border-left: 4px solid black;
   height: 65vh;
-  width: 151px;
+  width: 153px;
   background-color: lightblue;
   overflow: hidden;
   position: relative;
@@ -277,16 +306,17 @@ main {
 }
 
 .arrow-icon {
-  height: 20px;
+  height: 25px;
   position: absolute;
-  width: 20px;
-  left: -5px;
+  width: 25px;
+  left: -7px;
   top: 31vh;
+  z-index: 3;
 }
 
 .gameboard {
   background-color: #a4e2cf;
-  border-image: linear-gradient(to right, #81f0ff, #0063c0) 30;
+  border-image: linear-gradient(to right, #af89ec, #0063c0) 30;
   border-width: 7px;
   border-style: solid;
   display: grid;
@@ -327,46 +357,54 @@ main {
 }
 
 .spin-button {
-  width: 150px;
-  height: 50px;
-  position: absolute;
+  background-image: linear-gradient(to top right, #a7976c, #fff678, #bba469);
   bottom: 0;
+  height: 60px;
+  font-style: italic;
+  font-size: 1.4em;
+  position: absolute;
+  right: 3px;
+  width: 152px;
 }
-
-.solve-button:hover, .consonant:hover,
-.vowel:hover {
-  color: white;
-  cursor: pointer;
-}
-.solve-button:disabled, .consonant:disabled,
-.vowel:disabled {
-  color: grey;
-}
-.solve-button:active, .consonant:active,
-.vowel:active {
-  color: red;
+.spin-button:hover {
+  background-image: linear-gradient(to top right, #d3bf8a, #fffab6, #e9cc84);
 }
 
 .past-guesses {
   align-self: flex-start;
+  bottom: -55px;
+  height: 20px;
+  display: flex;
   justify-self: flex-start;
   margin: 17px;
   position: relative;
-  bottom: -65px;
 }
 .past-guesses .past-guess {
   font-family: "Open Sans", sans-serif;
   font-size: 1.9em;
   color: white;
+  margin: 10px;
+}
+
+.consonant:hover,
+.vowel:hover, .solve-button:hover {
+  color: white;
+  cursor: pointer;
+}
+.consonant:disabled,
+.vowel:disabled, .solve-button:disabled {
+  color: #4d4d4d;
+}
+.consonant:active,
+.vowel:active, .solve-button:active {
+  color: #69e0e4;
 }
 
 .consonant,
 .vowel {
-  list-style: none;
-}
-
-.solve-button {
-  color: #f94fff;
+  background: none;
+  border: 0;
+  font-size: 1.2em;
 }
 
 /*# sourceMappingURL=style.css.map */
