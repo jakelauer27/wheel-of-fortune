@@ -211,7 +211,7 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 2;
+  z-index: 4;
 }
 
 .popup {
@@ -224,7 +224,7 @@ body {
   top: calc(15vh);
   right: calc(50vw - 225px);
   width: 600px;
-  z-index: 3;
+  z-index: 5;
 }
 .popup .input-player1-name {
   border: 3px solid #69e0e4;
@@ -353,14 +353,24 @@ main {
   padding: 10px;
   border-bottom: 3px solid black;
 }
+.wheel .wheel-overlay {
+  position: absolute;
+  top: 217px;
+  right: 0;
+  left: 0;
+  height: 58px;
+  background-color: #5fff5f;
+  opacity: 0.5;
+  z-index: 2;
+}
 
 .arrow-icon {
   height: 25px;
   position: absolute;
   width: 25px;
   left: -7px;
-  top: 31vh;
-  z-index: 1;
+  top: 233px;
+  z-index: 3;
 }
 
 .gameboard {

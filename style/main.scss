@@ -31,7 +31,7 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 2;
+  z-index: 4;
 
 }
 
@@ -45,7 +45,7 @@ body {
   top: calc(15vh);
   right: calc(50vw - 225px);
   width: 600px;
-  z-index: 3;
+  z-index: 5;
 
 
   .input-player1-name {
@@ -190,6 +190,16 @@ main {
     border-bottom: 3px solid black;
   }
 
+  .wheel-overlay {
+    position: absolute;
+    top: 217px;
+    right: 0;
+    left: 0;
+    height: 58px;
+    background-color: rgb(95, 255, 95);
+    opacity: .5;
+    z-index: 2;
+  }
 }
 
 .arrow-icon {
@@ -197,8 +207,8 @@ main {
   position: absolute;
   width: 25px;
   left: -7px;
-  top: 31vh;
-  z-index: 1;
+  top: 233px;
+  z-index: 3;
 }
 
 .gameboard {
