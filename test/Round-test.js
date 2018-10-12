@@ -1,13 +1,7 @@
 const Round = require('../lib/round');
 const chai = require('chai');
 const expect = chai.expect;
-const spies = require('chai-spies');
-chai.use(spies);
 
-global.Data = require('../lib/data');
-global.Puzzle = require('../lib/puzzle');
-global.updateDom = require('../lib/updateDom.js');
-chai.spy.on(global.updateDom, ['resetPuzzleDom' ], () => true);
 
 describe('Round', () => {
 
@@ -30,6 +24,8 @@ describe('Round', () => {
   }); 
 
   it('should be able to advance to the next round', () => {
-    
+    round.nextRound();
+    expect(round.roundNum).to.equal(2);
+    expect(round.round).to.equal('two')
   }); 
 })

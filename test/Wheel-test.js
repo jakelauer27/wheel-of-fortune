@@ -10,7 +10,7 @@ global.data = require('../lib/data.js')
 global.updateDom = require('../lib/updateDom.js');
 chai.spy.on(global.updateDom, ['resetElements', 'generateElementsDom', 'disableSpinButton'], () => true);
 
-describe('Game', () => {
+describe('Wheel', () => {
 
     var wheel;
 

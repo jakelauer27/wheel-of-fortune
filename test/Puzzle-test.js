@@ -2,7 +2,10 @@ const Puzzle = require('../lib/puzzle');
 const chai = require('chai');
 const expect = chai.expect;
 
-describe('Round', () => {
+global.Data = require('../lib/data');
+global.Round = require('../lib/round')
+
+describe('Puzzle', () => {
 
   var puzzle; 
 
@@ -18,4 +21,10 @@ describe('Round', () => {
     expect(puzzle.solution).to.eql(['T', 'H', 'I', 'S', ' ', 'I', 'S', ' ', 'T', 'H', 'E', ' ', 'A', 'N', 'S', 'W', 'E', 'R']);
   }); 
 
+  it('should be able to generate a new puzzle', () => {
+    round = new Round;
+    puzzle.generatePuzzle();
+    expect(puzzle.category).to.not.equal('none');
+    expect(puzzle.solution).to.not.eql(['T', 'H', 'I', 'S', ' ', 'I', 'S', ' ', 'T', 'H', 'E', ' ', 'A', 'N', 'S', 'W', 'E', 'R'])
+  });
 })
