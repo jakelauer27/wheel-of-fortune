@@ -64,4 +64,13 @@ describe('Game', () => {
     expect(updateDom.instruct).to.have.been.called(2)
     expect(updateDom.nextPlayerDom).to.have.been.called(2)
   });
+
+  it.skip('should be able to be reset to its original state', () => {
+    game.reset();
+    expect(game.round).to.equal(1);
+    expect(game.players).to.eql([player1, player2, player3]);
+    expect(game.currentPlayerIndex).to.equal(0);
+    expect(game.playerNames).to.eql(['jim', 'john', 'jake']);
+    expect(game.currentPlayerNameIndex).to.equal(0)
+  });
 });
