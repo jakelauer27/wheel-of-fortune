@@ -104,12 +104,30 @@ body {
   }
 }
 
+.action-popup-main-info {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 2.4em;
+  margin: 20px auto;
+  background: linear-gradient(to top right, rgb(145, 145, 145), rgb(240, 240, 240), rgb(129, 129, 129));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.action-popup-secondary-info {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  padding: 20px;
+  text-align: center;
+}
+
 .hide {
   display: none;
 }
 
 .solve-popup {
-  top: calc(55vh)
+  top: calc(55vh);
 }
 
 .solve-input {
@@ -208,8 +226,9 @@ main {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 3.2em;
+  padding-top: 6px;
   text-align: center;
-  height: 62px;
+  height: 58px;
   width: 50px;
 }
 
