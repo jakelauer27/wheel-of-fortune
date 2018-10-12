@@ -136,6 +136,7 @@ footer {
   display: flex;
   justify-content: space-around;
   padding: 20px;
+  position: relative;
 }
 .letter-section-container .vowels-list {
   flex-grow: 0.25;
