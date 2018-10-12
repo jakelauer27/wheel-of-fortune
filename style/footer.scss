@@ -10,6 +10,7 @@ footer {
   background-image: linear-gradient(to top right, rgb(90, 90, 90), rgb(184, 184, 184));
   display: flex;
   justify-content: space-around;
+  
 
   .letter-list {
     border-top: 3px solid black;
@@ -18,6 +19,7 @@ footer {
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    position: relative;
   }
 
   .vowels-list {
