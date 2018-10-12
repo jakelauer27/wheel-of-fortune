@@ -178,7 +178,7 @@ main {
   border-left: 4px solid black;
   height: 65vh;
   width: 153px;
-  background-color: lightblue;
+  background-color: rgb(139, 139, 139);
   overflow: hidden;
   position: relative;
 
@@ -190,10 +190,6 @@ main {
     border-bottom: 3px solid black;
   }
 
-  .bankrupt {
-    font-size: 1em;
-    padding: 16px 8px 16px;
-  }
 }
 
 .arrow-icon {
@@ -225,7 +221,7 @@ main {
   border: 5px solid black;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
-  font-size: 3.2em;
+  font-size: 3.1em;
   padding-top: 6px;
   text-align: center;
   height: 58px;
