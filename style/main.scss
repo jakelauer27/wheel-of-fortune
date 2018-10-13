@@ -9,30 +9,25 @@ $bluePlayer: rgb(22, 132, 165);
 $purpleLight: rgb(167, 82, 236);
 $greenLight: rgb(104, 226, 184);
 $blueLight: rgb(105, 224, 228);
+$goldGradient: linear-gradient(to top right, rgb(167, 151, 108), rgb(255, 246, 120), rgb(187, 164, 105));
 
-%input {
-  border-radius: 20px;
-  height: 35px;
-  margin: 10px auto;
-  text-align:center;
-  width: 80%;
-  font-size: 1.4em;
-}
+///////////////////////////////GENERAL/////////////////////////////
 
 body {
   background: black;
 }
 
+/////////////////////////////POPUPS AND OVERLAYS/////////////////////////
+
 .dark-overlay {
   background-color: black;
+  bottom: 0;
   opacity: 0.7;
   position: absolute;
-  bottom: 0;
-  top: 0;
-  right: 0;
   left: 0;
+  right: 0;
+  top: 0;
   z-index: 4;
-
 }
 
 .popup {
@@ -42,11 +37,19 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: calc(15vh);
   right: calc(50vw - 225px);
+  top: calc(15vh);
   width: 600px;
   z-index: 5;
 
+  %input {
+    border-radius: 20px;
+    height: 35px;
+    margin: 10px auto;
+    text-align:center;
+    width: 80%;
+    font-size: 1.4em;
+  }
 
   .input-player1-name {
     @extend %input;
@@ -76,18 +79,18 @@ body {
   }
 
   .new-game {
+    background: $goldGradient;
+    background-clip: text;
     font-family: 'Alfa Slab One', cursive;
     font-size: 2.4em;
     margin: 20px auto;
-    background: linear-gradient(to top right, rgb(167, 151, 108), rgb(255, 246, 120), rgb(187, 164, 105));
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
 
 .go-button {
-  background-image: linear-gradient(to top right, rgb(167, 151, 108), rgb(255, 246, 120), rgb(187, 164, 105));
+  background-image: $goldGradient;
   border: 3px solid white;
   border-radius: 20px;
   color: black;
@@ -105,12 +108,12 @@ body {
 }
 
 .action-popup-main-info {
+  background: linear-gradient(to top right, rgb(145, 145, 145), rgb(240, 240, 240), rgb(129, 129, 129));
+  background-clip: text;
   font-family: 'Alfa Slab One', cursive;
   font-size: 2.4em;
   margin: 20px auto;
-  background: linear-gradient(to top right, rgb(145, 145, 145), rgb(240, 240, 240), rgb(129, 129, 129));
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -139,6 +142,8 @@ body {
   }
 }
 
+//////////////////////////////GAMEBOARD SECTION//////////////////////////
+
 main {
   align-items: center;
   background-image: url('../images/background.png');
@@ -148,67 +153,19 @@ main {
 }
 
 .game-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .game-title {
+  background:  $goldGradient;
+  background-clip: text;
   font-family: 'Alfa Slab One', cursive;
   font-size: 2.6em;
   margin: 5px;
-  background: linear-gradient(to top right, rgb(167, 151, 108), rgb(255, 246, 120), rgb(187, 164, 105));
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.hint {
-  background-image: linear-gradient(to right, rgba(246, 239, 255, 0), $purplePlayer, $purpleHint, rgba(246, 239, 255, 0));
-  color: white;
-  font-size: 1.4em;
-  font-family: 'Open Sans', sans-serif;
-  margin: 7px;
-  padding: 5px;
-  text-align: center;
-  width: 850px;
-}
-
-.wheel {
-  border-left: 4px solid black;
-  height: 65vh;
-  width: 153px;
-  background-color: rgb(139, 139, 139);
-  overflow: hidden;
-  position: relative;
-
-  li {
-    font-family: 'Alfa Slab One', cursive;
-    font-size: 2em;
-    text-align: center;
-    padding: 10px;
-    border-bottom: 3px solid black;
-  }
-
-  .wheel-overlay {
-    position: absolute;
-    top: 217px;
-    right: 0;
-    left: 0;
-    height: 58px;
-    background-color: rgb(95, 255, 95);
-    opacity: .5;
-    z-index: 2;
-  }
-}
-
-.arrow-icon {
-  height: 25px;
-  position: absolute;
-  width: 25px;
-  left: -7px;
-  top: 233px;
-  z-index: 3;
 }
 
 .gameboard {
@@ -247,30 +204,22 @@ main {
   color: white;
 }
 
+.hint {
+  background-image: linear-gradient(to right, rgba(246, 239, 255, 0), $purplePlayer, $purpleHint, rgba(246, 239, 255, 0));
+  color: white;
+  font-size: 1.4em;
+  font-family: 'Open Sans', sans-serif;
+  margin: 7px;
+  padding: 5px;
+  text-align: center;
+  width: 850px;
+}
+
 .guesses-container {
   display: flex;
   justify-content: space-between;
   bottom: 10px;
   right: 20px;
-}
-
-.spin-button {
-  background-image: linear-gradient(to top right, rgb(167, 151, 108), rgb(255, 246, 120), rgb(187, 164, 105));
-  bottom: 0; 
-  height: 60px;
-  font-style: italic;
-  font-size: 1.4em;
-  position: absolute;
-  right: 0px;
-  width: 155px;
-
-  &:hover {
-    background-image: linear-gradient(to top right, rgb(211, 191, 138), rgb(255, 250, 182), rgb(233, 204, 132));
-  }
-
-  &:disabled {
-    background-image: linear-gradient(to top right, rgb(121, 109, 78), rgb(184, 180, 135), rgb(158, 139, 91));
-  }
 }
 
 .past-guesses {
@@ -290,5 +239,64 @@ main {
 
   }
 }
+
+///////////////////////GAME WHEEL////////////////////
+
+.wheel {
+  border-left: 4px solid black;
+  height: 65vh;
+  width: 153px;
+  background-color: rgb(139, 139, 139);
+  overflow: hidden;
+  position: relative;
+
+  li {
+    border-bottom: 3px solid black;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2em;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .wheel-overlay {
+    background-color: rgb(95, 255, 95);
+    height: 58px;
+    opacity: .5;
+    left: 0;
+    position: absolute;
+    top: 217px;
+    right: 0;
+    z-index: 2;
+  }
+}
+
+.arrow-icon {
+  height: 25px;
+  position: absolute;
+  width: 25px;
+  left: -7px;
+  top: 233px;
+  z-index: 3;
+}
+
+.spin-button {
+  background-image: $goldGradient;
+  bottom: 0; 
+  height: 60px;
+  font-style: italic;
+  font-size: 1.4em;
+  position: absolute;
+  right: 0px;
+  width: 155px;
+
+  &:hover {
+    background-image: linear-gradient(to top right, rgb(211, 191, 138), rgb(255, 250, 182), rgb(233, 204, 132));
+  }
+
+  &:disabled {
+    background-image: linear-gradient(to top right, rgb(121, 109, 78), rgb(184, 180, 135), rgb(158, 139, 91));
+  }
+}
+
 
 
