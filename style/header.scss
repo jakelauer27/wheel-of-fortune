@@ -5,30 +5,29 @@ $purpleLight: rgb(167, 82, 236);
 $greenLight: rgb(104, 226, 184);
 $blueLight: rgb(105, 224, 228);
 
-
 header {
+  align-items: center;
   background-color: grey;
   display: grid;
   grid-template-columns: repeat(3, 1fr) 150px;
-  align-items: center;
 
   section {
     border: 2px solid black;
     border-bottom-width: 4px;
     color: rgb(247, 247, 247);
     display: flex;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
     flex-grow: 1;
     justify-content: space-around;
     padding: 9px 9px 2px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2em;
   }
 
   .round {
     align-items: center;
     background-image: radial-gradient( rgb(114, 114, 114), rgb(31, 31, 31), black,);
-    display: flex;
     border-right: 0px;
+    display: flex;
     height: 69px;
     font-weight: 700;
     padding: 0;
@@ -47,8 +46,8 @@ header {
 
   .highlight {
     background-image: linear-gradient(to top right, rgb(167, 151, 108), rgb(255, 246, 120), rgb(187, 164, 105));
-    color: black;
     border-bottom-color: rgb(255, 255, 255);
+    color: black;
   }
 }
 
@@ -63,7 +62,6 @@ header {
 .player3 {
   background-image: linear-gradient(to right, $greenPlayer, $greenLight);
 }
-
 
 .player-label-total {
   grid-area: total;

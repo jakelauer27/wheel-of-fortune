@@ -44,27 +44,27 @@ table {
 }
 
 header {
+  align-items: center;
   background-color: grey;
   display: grid;
   grid-template-columns: repeat(3, 1fr) 150px;
-  align-items: center;
 }
 header section {
   border: 2px solid black;
   border-bottom-width: 4px;
   color: #f7f7f7;
   display: flex;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
   flex-grow: 1;
   justify-content: space-around;
   padding: 9px 9px 2px;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.2em;
 }
 header .round {
   align-items: center;
   background-image: radial-gradient(#727272, #1f1f1f, black);
-  display: flex;
   border-right: 0px;
+  display: flex;
   height: 69px;
   font-weight: 700;
   padding: 0;
@@ -79,8 +79,8 @@ header .player {
 }
 header .highlight {
   background-image: linear-gradient(to top right, #a7976c, #fff678, #bba469);
-  color: black;
   border-bottom-color: white;
+  color: black;
 }
 
 .player1 {
@@ -190,28 +190,19 @@ footer {
   padding: 20px;
 }
 
-.solve-input, .popup .input-player3-name, .popup .input-player2-name, .popup .input-player1-name {
-  border-radius: 20px;
-  height: 35px;
-  margin: 10px auto;
-  text-align: center;
-  width: 80%;
-  font-size: 1.4em;
-}
-
 body {
   background: black;
 }
 
 .dark-overlay {
   background-color: black;
+  bottom: 0;
   opacity: 0.7;
   position: absolute;
-  bottom: 0;
-  top: 0;
-  right: 0;
   left: 0;
-  z-index: 2;
+  right: 0;
+  top: 0;
+  z-index: 4;
 }
 
 .popup {
@@ -221,10 +212,18 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: calc(15vh);
   right: calc(50vw - 225px);
+  top: calc(15vh);
   width: 600px;
-  z-index: 3;
+  z-index: 5;
+}
+.popup .solve-input, .popup .input-player3-name, .popup .input-player2-name, .popup .input-player1-name {
+  border-radius: 20px;
+  height: 35px;
+  margin: 10px auto;
+  text-align: center;
+  width: 80%;
+  font-size: 1.4em;
 }
 .popup .input-player1-name {
   border: 3px solid #69e0e4;
@@ -245,12 +244,12 @@ body {
   border-color: #3e8e6f;
 }
 .popup .new-game {
+  background: linear-gradient(to top right, #a7976c, #fff678, #bba469);
+  background-clip: text;
   font-family: "Alfa Slab One", cursive;
   font-size: 2.4em;
   margin: 20px auto;
-  background: linear-gradient(to top right, #a7976c, #fff678, #bba469);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -271,12 +270,12 @@ body {
 }
 
 .action-popup-main-info {
+  background: linear-gradient(to top right, #919191, #f0f0f0, #818181);
+  background-clip: text;
   font-family: "Alfa Slab One", cursive;
   font-size: 2.4em;
   margin: 20px auto;
-  background: linear-gradient(to top right, #919191, #f0f0f0, #818181);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -312,59 +311,19 @@ main {
 }
 
 .game-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .game-title {
+  background: linear-gradient(to top right, #a7976c, #fff678, #bba469);
+  background-clip: text;
   font-family: "Alfa Slab One", cursive;
   font-size: 2.6em;
   margin: 5px;
-  background: linear-gradient(to top right, #a7976c, #fff678, #bba469);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.hint {
-  background-image: linear-gradient(to right, rgba(246, 239, 255, 0), #432076, #6B2375, rgba(246, 239, 255, 0));
-  color: white;
-  font-size: 1.4em;
-  font-family: "Open Sans", sans-serif;
-  margin: 7px;
-  padding: 5px;
-  text-align: center;
-  width: 850px;
-}
-
-.wheel {
-  border-left: 4px solid black;
-  height: 65vh;
-  width: 153px;
-  background-color: lightblue;
-  overflow: hidden;
-  position: relative;
-}
-.wheel li {
-  font-family: "Alfa Slab One", cursive;
-  font-size: 2em;
-  text-align: center;
-  padding: 10px;
-  border-bottom: 3px solid black;
-}
-.wheel .bankrupt {
-  font-size: 1em;
-  padding: 16px 8px 16px;
-}
-
-.arrow-icon {
-  height: 25px;
-  position: absolute;
-  width: 25px;
-  left: -7px;
-  top: 31vh;
-  z-index: 1;
 }
 
 .gameboard {
@@ -387,7 +346,7 @@ main {
   border: 5px solid black;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  font-size: 3.2em;
+  font-size: 3.1em;
   padding-top: 6px;
   text-align: center;
   height: 58px;
@@ -403,11 +362,73 @@ main {
   color: white;
 }
 
+.hint {
+  background-image: linear-gradient(to right, rgba(246, 239, 255, 0), #432076, #6B2375, rgba(246, 239, 255, 0));
+  color: white;
+  font-size: 1.4em;
+  font-family: "Open Sans", sans-serif;
+  margin: 7px;
+  padding: 5px;
+  text-align: center;
+  width: 850px;
+}
+
 .guesses-container {
   display: flex;
   justify-content: space-between;
   bottom: 10px;
   right: 20px;
+}
+
+.past-guesses {
+  align-self: flex-start;
+  bottom: -55px;
+  height: 20px;
+  display: flex;
+  justify-self: flex-start;
+  margin: 17px;
+  position: relative;
+}
+.past-guesses .past-guess {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.9em;
+  color: white;
+  margin: 10px;
+}
+
+.wheel {
+  border-left: 4px solid black;
+  height: 65vh;
+  width: 153px;
+  background-color: #8b8b8b;
+  overflow: hidden;
+  position: relative;
+}
+.wheel li {
+  border-bottom: 3px solid black;
+  font-family: "Alfa Slab One", cursive;
+  font-size: 2em;
+  padding: 10px;
+  text-align: center;
+}
+.wheel .wheel-overlay {
+  background-color: #5fff5f;
+  height: 58px;
+  opacity: 0.5;
+  left: 0;
+  position: absolute;
+  top: 217px;
+  right: 0;
+  z-index: 2;
+}
+
+.arrow-icon {
+  height: 25px;
+  position: absolute;
+  width: 25px;
+  left: -7px;
+  top: 233px;
+  z-index: 3;
 }
 
 .spin-button {
@@ -425,22 +446,6 @@ main {
 }
 .spin-button:disabled {
   background-image: linear-gradient(to top right, #796d4e, #b8b487, #9e8b5b);
-}
-
-.past-guesses {
-  align-self: flex-start;
-  bottom: -55px;
-  height: 20px;
-  display: flex;
-  justify-self: flex-start;
-  margin: 17px;
-  position: relative;
-}
-.past-guesses .past-guess {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.9em;
-  color: white;
-  margin: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
