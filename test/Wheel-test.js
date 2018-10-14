@@ -8,7 +8,7 @@ global.Game = require('../lib/game.js')
 global.Player = require('../lib/player.js')
 global.data = require('../lib/data.js')
 global.updateDom = require('../lib/updateDom.js');
-chai.spy.on(global.updateDom, ['resetElements', 'generateElementsDom', 'disableSpinButton'], () => true);
+chai.spy.on(global.updateDom, ['resetElements', 'generateElementsDom', 'spinWheel', 'toggleSpinButton'], () => true);
 
 describe('Wheel', () => {
 
