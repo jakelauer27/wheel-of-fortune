@@ -45,7 +45,7 @@ body {
   %input {
     border-radius: 20px;
     height: 35px;
-    margin: 10px auto;
+    margin: 15px auto;
     text-align:center;
     width: 80%;
     font-size: 1.4em;
@@ -136,6 +136,7 @@ body {
 .solve-input {
   @extend %input;
   border: 3px solid $purpleLight;
+  margin-top: 20px;
 
   &:hover {
     border-color: $purplePlayer;
@@ -193,6 +194,9 @@ main {
   text-align: center;
   height: 58px;
   width: 50px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .display-tile {

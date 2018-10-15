@@ -220,7 +220,7 @@ body {
 .popup .solve-input, .popup .input-player3-name, .popup .input-player2-name, .popup .input-player1-name {
   border-radius: 20px;
   height: 35px;
-  margin: 10px auto;
+  margin: 15px auto;
   text-align: center;
   width: 80%;
   font-size: 1.4em;
@@ -297,6 +297,7 @@ body {
 
 .solve-input {
   border: 3px solid #a752ec;
+  margin-top: 20px;
 }
 .solve-input:hover {
   border-color: #432076;
@@ -351,6 +352,9 @@ main {
   text-align: center;
   height: 58px;
   width: 50px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .display-tile {

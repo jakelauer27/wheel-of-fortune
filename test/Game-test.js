@@ -6,7 +6,7 @@ const spies = require('chai-spies');
 chai.use(spies);
 
 global.updateDom = require('../lib/updateDom.js');
-chai.spy.on(global.updateDom, ['endTurn', 'nextPlayerDom', 'instruct', 'launchActionPopup'], () => true);
+chai.spy.on(global.updateDom, ['endTurn', 'nextPlayerDom', 'instruct', 'launchActionPopup', 'disableLetters'], () => true);
 
 describe('Game', () => {
   var game;
