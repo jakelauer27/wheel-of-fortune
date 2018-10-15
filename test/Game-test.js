@@ -6,7 +6,7 @@ const spies = require('chai-spies');
 chai.use(spies);
 
 global.updateDom = require('../lib/updateDom.js');
-chai.spy.on(global.updateDom, ['endTurn', 'nextPlayerDom', 'instruct', 'launchActionPopup', 'disableLetters'], () => true);
+chai.spy.on(global.updateDom, ['endTurn', 'nextPlayer', 'instruct', 'launchActionPopup', 'disableLetters'], () => true);
 
 describe('Game', () => {
   var game;
@@ -47,6 +47,6 @@ describe('Game', () => {
     game.nextPlayer();
     expect(updateDom.endTurn).to.have.been.called(2)
     expect(updateDom.instruct).to.have.been.called(2)
-    expect(updateDom.nextPlayerDom).to.have.been.called(2)
+    expect(updateDom.nextPlayer).to.have.been.called(2)
   });
 });
