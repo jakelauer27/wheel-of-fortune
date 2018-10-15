@@ -4,9 +4,9 @@ const expect = chai.expect;
 const spies = require('chai-spies');
 chai.use(spies);
 
-global.Game = require('../lib/game.js')
-global.Player = require('../lib/player.js')
-global.data = require('../lib/data.js')
+global.Game = require('../lib/game.js');
+global.Player = require('../lib/player.js');
+global.data = require('../lib/data.js');
 global.updateDom = require('../lib/updateDom.js');
 chai.spy.on(global.updateDom, ['resetElements', 'generateElementsDom', 'spinWheel', 'toggleSpinButton'], () => true);
 
@@ -33,7 +33,6 @@ describe('Wheel', () => {
 
   it('should be able to append its elements to the dom wheel', () => {
     wheel.generateElements(data);
-    expect(updateDom.resetElements).to.have.been.called(2)
     expect(updateDom.generateElementsDom).to.have.been.called(2)
   });
 
