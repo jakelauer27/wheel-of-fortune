@@ -309,6 +309,11 @@ body {
   background-color: white;
   border-color: #dbd35f;
 }
+.go-button:disabled {
+  background-image: linear-gradient(to top right, #a7976c, #fff678, #bba469);
+  border: 3px solid white;
+  opacity: 0.6;
+}
 
 .action-popup-main-info {
   background: linear-gradient(to top right, #919191, #f0f0f0, #818181);

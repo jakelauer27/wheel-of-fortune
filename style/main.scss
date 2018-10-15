@@ -105,7 +105,12 @@ body {
     background-image: none;
     background-color: white;
     border-color: rgb(219, 211, 95);
-    
+  }
+
+  &:disabled {
+    background-image: $goldGradient;
+    border: 3px solid white;
+    opacity: 0.6;
   }
 }
 
