@@ -352,6 +352,9 @@ main {
   text-align: center;
   height: 58px;
   width: 50px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .display-tile {
