@@ -184,12 +184,12 @@ main {
   border-width: 7px;
   border-style: solid;
   display: grid;
-  grid-template-columns: repeat(13, 60px);
+  grid-template-columns: repeat(14, 60px);
   grid-gap: 3px;
   justify-content: center;
   margin: 0 auto;
   padding: 4px;
-  width: 820px;
+  width: 880px;
 }
 
 .tile {
@@ -237,7 +237,7 @@ main {
 
 .past-guesses {
   align-self: flex-start;
-  bottom: -55px;
+  bottom: -20px;
   height: 20px;
   display: flex;
   justify-self: flex-start;
