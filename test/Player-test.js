@@ -53,4 +53,12 @@ describe('Player', () => {
     expect(player.total).to.equal(100);
   });
 
+  it('should be able to reset its score and total to 0', () => {
+    player.addScore(700);
+    player.addTotal()
+    player.reset();
+    expect(player.total).to.equal(0);
+    expect(player.score).to.equal(0);
+  });
+
 })

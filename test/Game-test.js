@@ -24,17 +24,7 @@ describe('Game', () => {
     player3 = {
       name: 'jake'
     };
-    game = new Game('jim', 'john', 'jake', player1, player2, player3);
-  });
-
-  it('should default to a round of 1', () => {
-    var game = new Game();
-    expect(game.round).to.equal(1);
-  });
-
-  it('should be able to take in names and store them in an array', () => {
-    var game = new Game('jake', 'james', 'fred');
-    expect(game.playerNames).to.eql(['jake', 'james', 'fred']);
+    game = new Game(player1, player2, player3);
   });
 
   it('should be able to take in player objects and store them in an array', () => {
@@ -45,14 +35,9 @@ describe('Game', () => {
     expect(game.currentPlayerIndex).to.equal(0);
   });
 
-  it('should keep track of the current player name and default to the first player name', () => {
-    expect(game.currentPlayerNameIndex).to.equal(0);
-  });
-
   it('should be able to move to the next player', () => {
     currentPlayer = player1;
     game.nextPlayer();
-    expect(game.currentPlayerNameIndex).to.equal(1);
     expect(game.currentPlayerIndex).to.equal(1);
     expect(currentPlayer).to.equal(player2);
   });
@@ -63,14 +48,5 @@ describe('Game', () => {
     expect(updateDom.endTurn).to.have.been.called(2)
     expect(updateDom.instruct).to.have.been.called(2)
     expect(updateDom.nextPlayerDom).to.have.been.called(2)
-  });
-
-  it.skip('should be able to be reset to its original state', () => {
-    game.reset();
-    expect(game.round).to.equal(1);
-    expect(game.players).to.eql([player1, player2, player3]);
-    expect(game.currentPlayerIndex).to.equal(0);
-    expect(game.playerNames).to.eql(['jim', 'john', 'jake']);
-    expect(game.currentPlayerNameIndex).to.equal(0)
   });
 });
