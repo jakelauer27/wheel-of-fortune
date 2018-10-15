@@ -79,7 +79,7 @@ header .player {
 }
 header .highlight {
   background-image: linear-gradient(to top right, #a7976c, #fff678, #bba469);
-  border-bottom-color: white;
+  border-bottom-color: silver;
   color: black;
 }
 
@@ -349,6 +349,16 @@ body {
 }
 .solve-input:hover {
   border-color: #432076;
+}
+
+#cancel-button {
+  background-image: linear-gradient(to top right, #5e5e5e, #c9c9c9, #9b9b9a);
+  margin-top: 0px;
+}
+#cancel-button:hover {
+  background-image: none;
+  background-color: white;
+  border-color: #7c7c7c;
 }
 
 main {

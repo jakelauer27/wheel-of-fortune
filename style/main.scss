@@ -152,6 +152,16 @@ body {
   }
 }
 
+#cancel-button {
+  background-image: linear-gradient(to top right, rgb(94, 94, 94), rgb(201, 201, 201), rgb(155, 155, 154));
+  margin-top: 0px;
+
+  &:hover {
+    background-image: none;
+    background-color: white;
+    border-color: rgb(124, 124, 124);
+  }
+}
 //////////////////////////////GAMEBOARD SECTION//////////////////////////
 
 main {
