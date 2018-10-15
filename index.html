@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Wheel of Fortune</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" /> 
@@ -157,7 +158,18 @@
     <section class="instructions-container">
       <h2 class="instructions-current-player"></h2>
       <h2 class="instructions-content"></h2>
+      <div class="settings-container">
+        <i class="settings-icon fas fa-cog"></i>
+        <nav class="settings-menu hide">
+          <h4 class="new-game-button">New Game</h2>
+          <h4 class="how-to-play-button">How to Play</h2>
+        </nav>
+      </div>
     </section>
+    <nav class="settings-menu hide">
+      <h4 class="new-game-button">New Game</h2>
+      <h4 class="how-to-play-button">How to Play</h2>
+    </nav>
   </footer>
   <script src="lib/updateDom.js"> </script>
   <script src="lib/data.js"></script>

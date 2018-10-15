@@ -15,6 +15,8 @@ $goldGradient: linear-gradient(to top right, rgb(167, 151, 108), rgb(255, 246, 1
 
 body {
   background: black;
+  min-width: 1050px;
+  overflow: scroll;
 }
 
 /////////////////////////////POPUPS AND OVERLAYS/////////////////////////
@@ -302,5 +304,46 @@ main {
   }
 }
 
+.settings-container {
+  float: right;
 
+  &:hover .settings-menu {
+    display: block
+  }
+}
 
+.settings-menu {
+  background-image: linear-gradient(to top right, rgb(0, 0, 0), rgb(34, 34, 34), rgb(0, 0, 0));
+  border: 3px solid $purpleLight;
+  border-radius: 15px;
+  bottom: 27px;
+  color: rgb(139, 139, 139);
+  display: none;
+  position: absolute;
+  right: 10px;
+
+  h4 {
+    padding: 15px;
+
+    &:hover {
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .new-game-button {
+    padding-bottom: 0px;
+  }
+}
+
+.settings-icon {
+  color: rgb(61, 61, 61);
+  float: right;
+  font-size: 2.2em;
+  margin: 10px 20px;
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+}
