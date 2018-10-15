@@ -8,7 +8,7 @@ global.Game = require('../lib/game.js');
 global.Player = require('../lib/player.js');
 global.data = require('../lib/data.js');
 global.updateDom = require('../lib/updateDom.js');
-chai.spy.on(global.updateDom, ['resetElements', 'generateElementsDom', 'spinWheel', 'toggleSpinButton'], () => true);
+chai.spy.on(global.updateDom, ['resetElements', 'generateElements', 'spinWheel', 'toggleSpinButton'], () => true);
 
 describe('Wheel', () => {
 
@@ -33,7 +33,7 @@ describe('Wheel', () => {
 
   it('should be able to append its elements to the dom wheel', () => {
     wheel.generateElements(data);
-    expect(updateDom.generateElementsDom).to.have.been.called(2)
+    expect(updateDom.generateElements).to.have.been.called(2)
   });
 
   it('should be able to select a new current Element', () => {

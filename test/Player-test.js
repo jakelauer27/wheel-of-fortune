@@ -5,7 +5,7 @@ const spies = require('chai-spies');
 chai.use(spies);
 
 global.updateDom = require('../lib/updateDom.js');
-chai.spy.on(global.updateDom, ['addScoreDom', 'addTotalDom', 'bankruptDom' ], () => true);
+chai.spy.on(global.updateDom, ['addScore', 'addTotal', 'bankrupt' ], () => true);
 
 describe('Player', () => {
 
