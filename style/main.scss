@@ -124,6 +124,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.5em;
   padding: 20px;
+  max-height: 400px;
+  overflow: scroll;
   text-align: center;
 }
 
@@ -301,49 +303,5 @@ main {
 
   &:disabled {
     background-image: linear-gradient(to top right, rgb(121, 109, 78), rgb(184, 180, 135), rgb(158, 139, 91));
-  }
-}
-
-.settings-container {
-  float: right;
-
-  &:hover .settings-menu {
-    display: block
-  }
-}
-
-.settings-menu {
-  background-image: linear-gradient(to top right, rgb(0, 0, 0), rgb(34, 34, 34), rgb(0, 0, 0));
-  border: 3px solid $purpleLight;
-  border-radius: 15px;
-  bottom: 27px;
-  color: rgb(139, 139, 139);
-  display: none;
-  position: absolute;
-  right: 10px;
-
-  h4 {
-    padding: 15px;
-
-    &:hover {
-      color: white;
-      cursor: pointer;
-    }
-  }
-
-  .new-game-button {
-    padding-bottom: 0px;
-  }
-}
-
-.settings-icon {
-  color: rgb(61, 61, 61);
-  float: right;
-  font-size: 2.2em;
-  margin: 10px 20px;
-
-  &:hover {
-    color: white;
-    cursor: pointer;
   }
 }

@@ -189,8 +189,44 @@ footer {
   display: inline-block;
   padding: 20px;
 }
-.instructions-container .settings-icon {
+
+.settings-container {
   float: right;
+}
+.settings-container:hover .settings-menu {
+  display: block;
+}
+
+.settings-menu {
+  background-image: linear-gradient(to top right, black, #222222, black);
+  border: 3px solid #a752ec;
+  border-radius: 15px;
+  bottom: 27px;
+  color: #8b8b8b;
+  display: none;
+  position: absolute;
+  right: 10px;
+}
+.settings-menu h4 {
+  padding: 15px;
+}
+.settings-menu h4:hover {
+  color: white;
+  cursor: pointer;
+}
+.settings-menu .new-game-button {
+  padding-bottom: 0px;
+}
+
+.settings-icon {
+  color: #3d3d3d;
+  float: right;
+  font-size: 2.2em;
+  margin: 10px 20px;
+}
+.settings-icon:hover {
+  color: white;
+  cursor: pointer;
 }
 
 body {
@@ -289,6 +325,8 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.5em;
   padding: 20px;
+  max-height: 400px;
+  overflow: scroll;
   text-align: center;
 }
 
@@ -455,45 +493,6 @@ main {
 }
 .spin-button:disabled {
   background-image: linear-gradient(to top right, #796d4e, #b8b487, #9e8b5b);
-}
-
-.settings-container {
-  float: right;
-}
-.settings-container:hover .settings-menu {
-  display: block;
-}
-
-.settings-menu {
-  background-image: linear-gradient(to top right, black, #222222, black);
-  border: 3px solid #a752ec;
-  border-radius: 15px;
-  bottom: 27px;
-  color: #8b8b8b;
-  display: none;
-  position: absolute;
-  right: 10px;
-}
-.settings-menu h4 {
-  padding: 15px;
-}
-.settings-menu h4:hover {
-  color: white;
-  cursor: pointer;
-}
-.settings-menu .new-game-button {
-  padding-bottom: 0px;
-}
-
-.settings-icon {
-  color: #3d3d3d;
-  float: right;
-  font-size: 2.2em;
-  margin: 10px 20px;
-}
-.settings-icon:hover {
-  color: white;
-  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
