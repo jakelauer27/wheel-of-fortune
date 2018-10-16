@@ -62,7 +62,7 @@ header section {
   position: relative;
 }
 header section .add-score-container {
-  bottom: 0px;
+  bottom: -35px;
   border: 3px solid silver;
   border-radius: 0px 0px 15px 15px;
   color: white;
