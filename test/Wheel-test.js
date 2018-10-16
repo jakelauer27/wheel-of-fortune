@@ -8,7 +8,7 @@ global.Game = require('../lib/game.js');
 global.Player = require('../lib/player.js');
 global.data = require('../lib/data.js');
 global.updateDom = require('../lib/updateDom.js');
-chai.spy.on(global.updateDom, ['generateElements', 'spinWheel', 'toggleSpinButton', 'instruct', 'disableLetters'], () => true);
+chai.spy.on(global.updateDom, ['generateElements', 'spinWheel', 'toggleSpinButton'], () => true);
 
 describe('Wheel', () => {
 
@@ -35,6 +35,12 @@ describe('Wheel', () => {
       wheel.generateElements(data);
       expect(wheel.elements).to.not.eql(firstGeneration)
     });
+
+    it('should be able to randomly select and return a new selected Element', () => {
+      wheel.generateElements(data);
+      expect(wheel.elements.includes(wheel.spin())).to.be.true;
+      expect(wheel.spin()).to.equal(wheel.currentElement);
+    });
   
     it('should be able to append its elements to the dom wheel', () => {
       updateDom.generateElements.__spy.calls = [];
@@ -44,12 +50,6 @@ describe('Wheel', () => {
   });
 
   describe('Wheel - spin()', () => {
-
-    it('should be able to randomly select and return a new selected Element', () => {
-      wheel.generateElements(data);
-      expect(wheel.elements.includes(wheel.spin())).to.be.true;
-      expect(wheel.spin()).to.equal(wheel.currentElement);
-    });
 
     it('should append the new selected wheel element to the dom', () => {
       updateDom.spinWheel.__spy.calls = [];
@@ -68,6 +68,8 @@ describe('Wheel', () => {
 
     it('should disable letters on the dom and enable to the spin button on the dom when its time to spin again', () => {
       updateDom.toggleSpinButton.__spy.calls = [];
+      updateDom.instruct.__spy.calls = [];
+      updateDom.disableLetters.__spy.calls = [];
       wheel.spinAgain();
       expect(updateDom.instruct).to.have.been.called(1);
       expect(updateDom.disableLetters).to.have.been.called(1);

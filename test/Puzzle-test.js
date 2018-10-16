@@ -56,7 +56,7 @@ describe('Puzzle', () => {
     });
   });
 
-  describe('Puzzle - GenerateBonusRonus()', () => {
+  describe('Puzzle - GenerateBonusRound()', () => {
 
     it('should update its category and solution when generating a new bonus puzzle', () => {
       round = new Round;
