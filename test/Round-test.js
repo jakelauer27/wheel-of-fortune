@@ -23,17 +23,19 @@ describe('Round', () => {
     expect(round.round).to.equal('one');
   }); 
 
-  it('should be able to advance to the next round', () => {
-    round.nextRound();
-    expect(round.roundNum).to.equal(2);
-    expect(round.round).to.equal('two');
-  }); 
-
-  it('should move to the bonus round after round 4', () => {
-    round.nextRound();
-    round.nextRound();
-    round.nextRound();
-    round.nextRound();
-    expect(round.round).to.equal('Bonus');
+  describe('Round - nextRound()', () => {
+    it('should be able to advance to the next round', () => {
+      round.nextRound();
+      expect(round.roundNum).to.equal(2);
+      expect(round.round).to.equal('two');
+    }); 
+  
+    it('should move to the bonus round after round 4', () => {
+      round.nextRound();
+      round.nextRound();
+      round.nextRound();
+      round.nextRound();
+      expect(round.round).to.equal('Bonus');
+    });
   });
 })
