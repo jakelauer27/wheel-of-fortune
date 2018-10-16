@@ -61,6 +61,7 @@ header section {
   padding: 9px 9px 2px;
   position: relative;
 }
+
 header section .add-score-container {
   bottom: -35px;
   border: 3px solid silver;
