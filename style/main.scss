@@ -9,7 +9,7 @@ $bluePlayer: rgb(22, 132, 165);
 $purpleLight: rgb(167, 82, 236);
 $greenLight: rgb(104, 226, 184);
 $blueLight: rgb(105, 224, 228);
-$goldGradient: linear-gradient(to top right, rgb(167, 151, 108), rgb(255, 246, 120), rgb(187, 164, 105));
+$goldGradient: linear-gradient(to top right, rgb(212, 187, 117), rgb(255, 246, 120), rgb(187, 164, 105));
 
 ///////////////////////////////GENERAL/////////////////////////////
 
@@ -183,6 +183,7 @@ main {
   background-clip: text;
   font-family: 'Alfa Slab One', cursive;
   font-size: 2.6em;
+  padding-top: 40px;
   margin: 5px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -247,7 +248,7 @@ main {
 
 .past-guesses {
   align-self: flex-start;
-  bottom: -20px;
+  bottom: 10px;
   height: 20px;
   display: flex;
   justify-self: flex-start;

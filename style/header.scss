@@ -21,6 +21,23 @@ header {
     flex-grow: 1;
     justify-content: space-around;
     padding: 9px 9px 2px;
+    position: relative;
+
+    .add-score-container {
+      bottom: -35px;
+      border: 3px solid silver;
+      border-radius: 0px 0px 15px 15px;
+      color: white;
+      background-image: linear-gradient(to top right, rgb(0, 0, 0), rgb(34, 34, 34), rgb(0, 0, 0));
+      position: absolute;
+      right: -1px;
+      transition: all .3s ease; 
+      z-index: 3;
+
+      .add-score {
+        padding: 5px 50px;
+      }
+    }
   }
 
   .round {

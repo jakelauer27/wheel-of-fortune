@@ -61,21 +61,20 @@ header section {
   padding: 9px 9px 2px;
   position: relative;
 }
-header section .add-score {
+
+header section .add-score-container {
   bottom: -35px;
   border: 3px solid silver;
   border-radius: 0px 0px 15px 15px;
   color: white;
   background-image: linear-gradient(to top right, black, #222222, black);
-  padding: 5px 50px;
   position: absolute;
   right: -1px;
   transition: all 0.3s ease;
-  z-index: 5;
+  z-index: 3;
 }
-header section .slide {
-  height: 0;
-  overflow: hidden;
+header section .add-score-container .add-score {
+  padding: 5px 50px;
 }
 header .round {
   align-items: center;
@@ -302,7 +301,7 @@ body {
   border-color: #3e8e6f;
 }
 .popup .new-game {
-  background: linear-gradient(to top right, #a7976c, #fff678, #bba469);
+  background: linear-gradient(to top right, #d4bb75, #fff678, #bba469);
   background-clip: text;
   font-family: "Alfa Slab One", cursive;
   font-size: 2.4em;
@@ -312,7 +311,7 @@ body {
 }
 
 .go-button {
-  background-image: linear-gradient(to top right, #a7976c, #fff678, #bba469);
+  background-image: linear-gradient(to top right, #d4bb75, #fff678, #bba469);
   border: 3px solid white;
   border-radius: 20px;
   color: black;
@@ -327,7 +326,7 @@ body {
   border-color: #dbd35f;
 }
 .go-button:disabled {
-  background-image: linear-gradient(to top right, #a7976c, #fff678, #bba469);
+  background-image: linear-gradient(to top right, #d4bb75, #fff678, #bba469);
   border: 3px solid white;
   opacity: 0.6;
 }
@@ -393,10 +392,11 @@ main {
 }
 
 .game-title {
-  background: linear-gradient(to top right, #a7976c, #fff678, #bba469);
+  background: linear-gradient(to top right, #d4bb75, #fff678, #bba469);
   background-clip: text;
   font-family: "Alfa Slab One", cursive;
   font-size: 2.6em;
+  padding-top: 40px;
   margin: 5px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -461,7 +461,7 @@ main {
 
 .past-guesses {
   align-self: flex-start;
-  bottom: -20px;
+  bottom: 10px;
   height: 20px;
   display: flex;
   justify-self: flex-start;
@@ -511,7 +511,7 @@ main {
 }
 
 .spin-button {
-  background-image: linear-gradient(to top right, #a7976c, #fff678, #bba469);
+  background-image: linear-gradient(to top right, #d4bb75, #fff678, #bba469);
   bottom: 0;
   height: 60px;
   font-style: italic;
