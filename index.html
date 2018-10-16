@@ -15,9 +15,17 @@
   <div class="dark-overlay"></div>
   <div class="start-game-popup popup">
     <h1 class="new-game">New Game</h1>
-    <input class="input-player-name input-player1-name" type="text" placeholder="Enter Player 1 Name">
-    <input class="input-player-name input-player2-name" type="text" placeholder="Enter Player 2 Name">
-    <input class="input-player-name input-player3-name" type="text" placeholder="Enter Player 3 Name">
+    <div class="new-game-popup-container">
+      <input class="input-player-name input-player1-name" type="text" placeholder="Enter Player 1 Name">
+      <input class="input-player-name input-player2-name" type="text" placeholder="Enter Player 2 Name">
+      <input class="input-player-name input-player3-name" type="text" placeholder="Enter Player 3 Name">
+      <div class='start-game-checkbox-container'>
+        <h4 class="start-game-popup-ai-label">AI</h4>
+        <input class="input-ai-checkbox player1-ai-checkbox" type="checkbox">
+        <input class="input-ai-checkbox player2-ai-checkbox" type="checkbox">
+        <input class="input-ai-checkbox player3-ai-checkbox" type="checkbox">
+      </div>
+    </div>
     <button class ="btn-start-game go-button" disabled='true'>Start Game</button>
   </div>
   <div class="action-popup popup hide">

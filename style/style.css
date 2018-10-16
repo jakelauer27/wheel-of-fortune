@@ -290,6 +290,40 @@ footer {
   -webkit-text-fill-color: transparent;
 }
 
+.new-game-popup-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start-game-checkbox-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  right: -5px;
+  top: -19px;
+}
+.start-game-checkbox-container input {
+  margin: 30px;
+  transform: scale(1.7);
+}
+.start-game-checkbox-container h4 {
+  color: #b4b4b4;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-left: 26px;
+}
+
+.start-game-names-container {
+  align-items: flex-end;
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
+}
+
 .go-button {
   background-image: linear-gradient(to top right, #d4bb75, #fff678, #bba469);
   border: 3px solid white;
