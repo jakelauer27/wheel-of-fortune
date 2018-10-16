@@ -59,6 +59,23 @@ header section {
   flex-grow: 1;
   justify-content: space-around;
   padding: 9px 9px 2px;
+  position: relative;
+}
+header section .add-score {
+  bottom: -35px;
+  border: 3px solid silver;
+  border-radius: 0px 0px 15px 15px;
+  color: white;
+  background-image: linear-gradient(to top right, black, #222222, black);
+  padding: 5px 50px;
+  position: absolute;
+  right: -1px;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+header section .slide {
+  height: 0;
+  overflow: hidden;
 }
 header .round {
   align-items: center;
