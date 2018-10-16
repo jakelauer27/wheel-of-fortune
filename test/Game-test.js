@@ -35,18 +35,34 @@ describe('Game', () => {
     expect(game.currentPlayerIndex).to.equal(0);
   });
 
-  it('should be able to move to the next player', () => {
-    currentPlayer = player1;
-    game.nextPlayer();
-    expect(game.currentPlayerIndex).to.equal(1);
-    expect(currentPlayer).to.equal(player2);
-  });
+  describe('Game - nextPlayer()', () => {
+    
+    it('should be able to move to the next player', () => {
+      currentPlayer = player1;
+      game.nextPlayer();
+      expect(game.currentPlayerIndex).to.equal(1);
+      expect(currentPlayer).to.equal(player2);
+    });
 
-  it('should update the dom when moving to the next player', () => {
-    currentPlayer = player1;
-    game.nextPlayer();
-    expect(updateDom.endTurn).to.have.been.called(2)
-    expect(updateDom.instruct).to.have.been.called(2)
-    expect(updateDom.nextPlayer).to.have.been.called(2)
+    it('should be able to move to player 1 after player3 finishes their turn', () => {
+      currentPlayer = player3;
+      game.currentPlayerIndex = 2;
+      game.nextPlayer();
+      expect(game.currentPlayerIndex).to.equal(0);
+      expect(currentPlayer).to.equal(player1);
+    });
+  
+    it('should update the dom when moving to the next player', () => {
+      updateDom.endTurn.__spy.calls = [];
+      updateDom.instruct.__spy.calls = [];
+      updateDom.nextPlayer.__spy.calls = [];
+      updateDom.launchActionPopup.__spy.calls = [];
+      currentPlayer = player1;
+      game.nextPlayer();
+      expect(updateDom.endTurn).to.have.been.called(1)
+      expect(updateDom.instruct).to.have.been.called(1)
+      expect(updateDom.nextPlayer).to.have.been.called(1)
+      expect(updateDom.launchActionPopup).to.have.been.called(1)
+    });
   });
 });

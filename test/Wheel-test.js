@@ -8,7 +8,7 @@ global.Game = require('../lib/game.js');
 global.Player = require('../lib/player.js');
 global.data = require('../lib/data.js');
 global.updateDom = require('../lib/updateDom.js');
-chai.spy.on(global.updateDom, ['generateElements', 'spinWheel', 'toggleSpinButton'], () => true);
+chai.spy.on(global.updateDom, ['generateElements', 'spinWheel', 'toggleSpinButton', 'instruct', 'disableLetters'], () => true);
 
 describe('Wheel', () => {
 
@@ -60,6 +60,17 @@ describe('Wheel', () => {
     it('should disable the spin wheel on the dom', () => {
       updateDom.toggleSpinButton.__spy.calls = [];
       wheel.spin();
+      expect(updateDom.toggleSpinButton).to.have.been.called(1);
+    });
+  });
+
+  describe('Wheel - spinAgain()', () => {
+
+    it('should disable letters on the dom and enable to the spin button on the dom when its time to spin again', () => {
+      updateDom.toggleSpinButton.__spy.calls = [];
+      wheel.spinAgain();
+      expect(updateDom.instruct).to.have.been.called(1);
+      expect(updateDom.disableLetters).to.have.been.called(1);
       expect(updateDom.toggleSpinButton).to.have.been.called(1);
     });
   });
