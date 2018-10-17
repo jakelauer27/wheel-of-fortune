@@ -12,7 +12,7 @@ chai.spy.on(global.updateDom, ['generateElements', 'spinWheel', 'toggleSpinButto
 
 describe('Wheel', () => {
 
-    var wheel;
+  var wheel;
 
   beforeEach(() => {
     wheel = new Wheel;
