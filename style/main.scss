@@ -124,7 +124,8 @@ main {
 
 .wheel {
   border-left: 4px solid black;
-  height: 65vh;
+  height: 70vh;
+  min-height: 510px;
   width: 153px;
   background-color: rgb(139, 139, 139);
   overflow: hidden;

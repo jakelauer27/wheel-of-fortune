@@ -244,7 +244,7 @@ footer {
 .ai-turn-notification {
   color: #ce2424;
   font-family: "Open Sans", sans-serif;
-  font-size: 2.3em;
+  font-size: 2em;
   font-weight: 600;
   right: calc(50vw - 100px);
   top: calc(90vh);
@@ -528,7 +528,8 @@ main {
 
 .wheel {
   border-left: 4px solid black;
-  height: 65vh;
+  height: 70vh;
+  min-height: 510px;
   width: 153px;
   background-color: #8b8b8b;
   overflow: hidden;
