@@ -18,6 +18,17 @@ $goldGradient: linear-gradient(to top right, rgb(212, 187, 117), rgb(255, 246, 1
   z-index: 4;
 }
 
+.ai-turn-notification {
+  color: rgb(206, 36, 36);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.3em;
+  font-weight: 600;
+  right: calc(50vw - 100px);
+  top: calc(90vh);
+  position: absolute;
+  z-index: 6;
+}
+
 .popup {
   animation: fadeIn 0.5s ease;
   background-image: radial-gradient( rgb(114, 114, 114), rgb(31, 31, 31), black,);
@@ -76,6 +87,44 @@ $goldGradient: linear-gradient(to top right, rgb(212, 187, 117), rgb(255, 246, 1
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
+
+.new-game-popup-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start-game-checkbox-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  right: -5px;
+  top: 58px;
+
+  input {
+    margin: 22px 30px;
+    transform: scale(1.7)
+  }
+
+  h4 {
+    color: rgb(180, 180, 180);
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-left: 26px;
+    position: relative;
+    top: 17px;
+  }
+}
+
+.start-game-names-container {
+  align-items: flex-end;
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
 }
 
 .go-button {
