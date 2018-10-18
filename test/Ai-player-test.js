@@ -62,13 +62,13 @@ describe('AIPlayer', () => {
   describe('AIPlayer - chooseLetter()', () => {
 
     it('should return an object with two properties', () => {
-      puzzle = new Puzzle()
+      puzzle = new Puzzle();
       expect(aiPlayer.chooseLetter()).to.have.property('correct');
       expect(aiPlayer.chooseLetter()).to.have.property('chosenLetter');
     });
 
     it('the returned object correct property should return a boolean', () => {
-      puzzle = new Puzzle()
+      puzzle = new Puzzle();
       expect((aiPlayer.chooseLetter()).correct).to.be.boolean();
     });
 
