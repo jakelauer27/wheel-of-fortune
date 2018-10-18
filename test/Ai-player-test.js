@@ -72,12 +72,49 @@ describe('AIPlayer', () => {
       expect((aiPlayer.chooseLetter()).correct).to.be.boolean();
     });
 
-    // it('should call either the correct or incorrect method', () => {
-    //   puzzle = new Puzzle();
-    //   console.log(aiPlayer.chooseCorrectLetter())
-      
-    // });
+  });
 
-  })
+  describe('AIPlayer - chooseCorrectLetter()', () => {
+    
+    it('Should attempt choose a correct letter on the dom', () => {
+      updateDom.aiChooseCorrectLetter.__spy.calls = []
+      aiPlayer.chooseCorrectLetter();
+      expect(updateDom.aiChooseCorrectLetter).to.have.been.called(1);
+    })
+  });
+
+  describe('AIPlayer - chooseIncorrectLetter()', () => {
+    
+    it('should choose an incorrect letter on the dom', () => {
+      updateDom.aiChooseIncorrectLetter.__spy.calls = []
+      aiPlayer.chooseIncorrectLetter();
+      expect(updateDom.aiChooseIncorrectLetter).to.have.been.called(1);
+    });
+  });
+
+  describe('AIPlayer - vowelCheck()', () => {
+  
+    it('should return true if value is a consonant', () => {
+      expect(aiPlayer.vowelCheck('F')).to.equal(true);
+    });
+  
+    it('should return true if value is a vowel and the player score is not 0', () => {
+      aiPlayer.score = 100;
+      expect(aiPlayer.vowelCheck('A')).to.equal(true);
+    });
+  
+    it('should return false if value is a vowel but player score is zero', () => {
+      aiPlayer.score = 0;
+      expect(aiPlayer.vowelCheck('A')).to.equal(false);
+    });
+  });
+
+  describe('AIPlayer - solve()', () => {
+    
+    it('should be able to solve the puzzle on the dom', () => {
+      aiPlayer.solve();
+      expect(updateDom.aiSolve).to.have.been.called(1);
+    })
+  });
 
 })
