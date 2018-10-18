@@ -433,7 +433,7 @@ footer {
 
 body {
   background: black;
-  min-width: 1050px;
+  min-width: 1070px;
   overflow: scroll;
 }
 
@@ -538,7 +538,7 @@ main {
 .wheel {
   border-left: 4px solid black;
   height: 70vh;
-  min-height: 510px;
+  min-height: 518px;
   width: 148px;
   background-color: #8b8b8b;
   overflow: hidden;
