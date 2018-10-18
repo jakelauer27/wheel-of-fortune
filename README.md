@@ -10,7 +10,7 @@ solve the puzzles to compete for a chance to spin the bonus wheel and take home 
 
 ## See it Live
 
-[Wheel of Fortune]() on Github Pages.
+[Wheel of Fortune](https://jakelauer27.github.io/wheel-of-fortune/) on Github Pages.
 
 ## Specs
 
