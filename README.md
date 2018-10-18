@@ -22,8 +22,7 @@ solve the puzzles to compete for a chance to spin the bonus wheel and take home 
 
 * Add Difficulty Levels for AI players
 * Refactor Wheel Generation and Puzzle Generation functions
-* Refactor AI player functions
-* Add Additional visual Elements like a speen wheel animation
+* Add additional visual elements like a speen wheel animation
 
 ## Setup
 
