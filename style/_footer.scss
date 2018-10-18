@@ -34,12 +34,11 @@ footer {
   .solve-button {
     display: flex;
     align-items: center;
-    width: 150px;
+    width: 148px;
     justify-content: center;
     padding: auto;
   }
 }
-
 
 %button-hover {
   &:hover {
@@ -81,7 +80,6 @@ footer {
   }
 }
 
-  
 .settings-container {
   float: right;
 

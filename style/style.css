@@ -80,7 +80,6 @@ header .player {
 }
 header .highlight {
   background-image: linear-gradient(to top right, #a7976c, #fff678, #bba469);
-  border-bottom-color: silver;
   color: black;
 }
 
@@ -148,7 +147,7 @@ footer {
 .letter-section-container .solve-button {
   display: flex;
   align-items: center;
-  width: 150px;
+  width: 148px;
   justify-content: center;
   padding: auto;
 }
@@ -416,6 +415,7 @@ footer {
 .add-score-container {
   bottom: -35px;
   border: 3px solid silver;
+  border-top: 0px;
   border-radius: 0px 0px 15px 15px;
   color: #16d384;
   background-image: linear-gradient(to top right, black, #222222, black);
@@ -539,7 +539,7 @@ main {
   border-left: 4px solid black;
   height: 70vh;
   min-height: 510px;
-  width: 153px;
+  width: 148px;
   background-color: #8b8b8b;
   overflow: hidden;
   position: relative;
@@ -574,12 +574,15 @@ main {
 .spin-button {
   background-image: linear-gradient(to top right, #d4bb75, #fff678, #bba469);
   bottom: 0;
+  border: 2px solid black;
+  border-bottom: 0px;
+  border-right: 3px;
   height: 60px;
   font-style: italic;
   font-size: 1.4em;
   position: absolute;
   right: 0px;
-  width: 155px;
+  width: 149px;
 }
 .spin-button:hover {
   background-image: linear-gradient(to top right, #d3bf8a, #fffab6, #e9cc84);

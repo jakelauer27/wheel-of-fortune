@@ -126,7 +126,7 @@ main {
   border-left: 4px solid black;
   height: 70vh;
   min-height: 510px;
-  width: 153px;
+  width: 148px;
   background-color: rgb(139, 139, 139);
   overflow: hidden;
   position: relative;
@@ -163,12 +163,15 @@ main {
 .spin-button {
   background-image: $goldGradient;
   bottom: 0; 
+  border: 2px solid black;
+  border-bottom: 0px;
+  border-right: 3px;
   height: 60px;
   font-style: italic;
   font-size: 1.4em;
   position: absolute;
   right: 0px;
-  width: 155px;
+  width: 149px;
 
   &:hover {
     background-image: linear-gradient(to top right, rgb(211, 191, 138), rgb(255, 250, 182), rgb(233, 204, 132));
