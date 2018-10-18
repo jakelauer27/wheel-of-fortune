@@ -242,16 +242,25 @@ footer {
 }
 
 .ai-turn-notification {
-  color: #ce2424;
+  animation: flashing 1s ease 0s infinite alternate;
+  color: #be3030;
   font-family: "Open Sans", sans-serif;
-  font-size: 2em;
+  font-size: 2.6em;
   font-weight: 600;
-  right: calc(50vw - 100px);
-  top: calc(90vh);
+  right: calc(50vw - 18px);
+  top: calc(73vh);
   position: absolute;
   z-index: 6;
 }
 
+@keyframes flashing {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .popup {
   animation: fadeIn 0.5s ease;
   background-image: radial-gradient(#727272, #1f1f1f, black);
