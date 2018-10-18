@@ -46,10 +46,10 @@ describe('bonusWheel', () => {
 
   describe('Bonuswheel - randomSortElements()', () => {
     
-      it('should be able to randomly sort its elements', () => {
-        const elements = bonusWheel.elements[0];
-        bonusWheel.randomSortElements();
-        expect(bonusWheel.elements[0]).to.not.equal(elements);
-      });
+    it('should be able to randomly sort its elements', () => {
+      const elements = bonusWheel.elements[0];
+      bonusWheel.randomSortElements();
+      expect(bonusWheel.elements[0]).to.not.equal(elements);
+    });
   });
 });

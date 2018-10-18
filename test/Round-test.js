@@ -13,7 +13,7 @@ describe('Round', () => {
   });
 
   it('should store all rounds in an array', () => {
-    expect(round.rounds).to.eql(['one', 'two', 'three', 'four'])
+    expect(round.rounds).to.eql(['one', 'two', 'three', 'four', 'Bonus'])
   }); 
 
   it('should store the current round as an integer and default to 1', () => {

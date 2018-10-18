@@ -29,5 +29,8 @@
     "jquery": "^3.3.1",
     "jsdom": "^12.2.0",
     "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "chai-asserttype": "^1.0.5"
   }
 }
