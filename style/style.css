@@ -81,6 +81,7 @@ header .player {
 header .highlight {
   background-image: linear-gradient(to top right, #a7976c, #fff678, #bba469);
   color: black;
+  text-shadow: 1px 1px #f6f6f6;
 }
 
 .player1 {
@@ -160,6 +161,7 @@ footer {
 .solve-button:disabled, .consonant:disabled,
 .vowel:disabled {
   color: #4d4d4d;
+  cursor: default;
 }
 .solve-button:active, .consonant:active,
 .vowel:active {
@@ -328,6 +330,9 @@ footer {
   margin: 22px 30px;
   transform: scale(1.7);
 }
+.start-game-checkbox-container input:hover {
+  cursor: pointer;
+}
 .start-game-checkbox-container h4 {
   color: #b4b4b4;
   font-family: "Open Sans", sans-serif;
@@ -359,6 +364,7 @@ footer {
   background-image: none;
   background-color: white;
   border-color: #dbd35f;
+  cursor: pointer;
 }
 .go-button:disabled {
   background-image: linear-gradient(to top right, #d4bb75, #fff678, #bba469);
@@ -426,6 +432,7 @@ footer {
 }
 .add-score-container .add-score {
   padding: 5px 50px;
+  text-shadow: 0px 0px;
 }
 .add-score-container .red {
   color: #b32828;
@@ -586,6 +593,7 @@ main {
 }
 .spin-button:hover {
   background-image: linear-gradient(to top right, #d3bf8a, #fffab6, #e9cc84);
+  cursor: pointer;
 }
 .spin-button:disabled {
   background-image: linear-gradient(to top right, #796d4e, #b8b487, #9e8b5b);
