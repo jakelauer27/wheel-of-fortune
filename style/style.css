@@ -416,6 +416,7 @@ footer {
   background-image: none;
   background-color: white;
   border-color: #7c7c7c;
+  cursor: pointer;
 }
 
 .add-score-container {
@@ -442,6 +443,10 @@ body {
   background: black;
   min-width: 1070px;
   overflow: scroll;
+}
+body ::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
 }
 
 main {
