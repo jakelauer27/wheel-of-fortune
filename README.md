@@ -1,4 +1,4 @@
-# Wheel-of-Fortune - Turing Mod 2 OOP Project
+# Wheel-of-Fortune 
 
 Enjoy a round of this three-player recreation of the classic Wheel of Fortune game. Spin the wheel with friends and 
 solve the puzzles to compete for a chance to spin the bonus wheel and take home massive prizes! Or fly solo and play against a couple of AI players!
